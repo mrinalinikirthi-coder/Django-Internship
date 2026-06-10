@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="display-5">
+            <i class="bi bi-journal-text"></i> All Posts
+        </h1>
+        <p class="text-muted">Read what people are sharing</p>
+    </div>
+</div>
+
+<div class="row">
+    {% for post in posts %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card post-card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'single_post' post.id %}" class="text-decoration-none">
+                            {{ post.title|truncatechars:40 }}
+                        </a>
+                    </h5>
+                    <p class="card-text text-muted small">
+                        <i class="bi bi-person"></i> {{ post.user.name }} &nbsp;
+                        <i class="bi bi-calendar"></i> {{ post.created_at|date:"M d, Y" }}
+                    </p>
+                    <p class="card-text">{{ post.content|truncatewords:25 }}</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'single_post' post.id %}" class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-chat"></i> View & Comment
+                        </a>
+                        {% if user.is_authenticated and user.id == post.user.id %}
+                            <div>
+                                <a href="{% url 'edit_post' post.id %}" class="btn btn-sm btn-outline-secondary">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a href="{% url 'delete_post' post.id %}" class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="col">
+            <div class="alert alert-info text-center">
+                <i class="bi bi-info-circle"></i> No posts yet.
+                {% if user.is_authenticated %}
+                    <a href="{% url 'create_post' %}">Create the first post!</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

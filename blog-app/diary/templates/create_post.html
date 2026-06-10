@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">
+                <i class="bi bi-pencil-square"></i> Create New Post
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Content</label>
+                        <textarea class="form-control" id="content" name="content" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-check-lg"></i> Publish Post
+                    </button>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

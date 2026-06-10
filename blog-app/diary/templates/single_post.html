@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <!-- Post Card -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h1 class="card-title">{{ post.title }}</h1>
+                <div class="text-muted mb-3">
+                    <i class="bi bi-person-circle"></i> {{ post.user.name }} &nbsp;
+                    <i class="bi bi-calendar"></i> {{ post.created_at|date:"F j, Y, g:i a" }}
+                    {% if post.updated_at != post.created_at %}
+                        <br><i class="bi bi-pencil-square"></i> Last edit: {{ post.updated_at|date:"F j, Y, g:i a" }}
+                    {% endif %}
+                </div>
+                <hr>
+                <p class="card-text fs-5">{{ post.content|linebreaks }}</p>
+                
+                {% if user.is_authenticated and user.id == post.user.id %}
+                    <div class="mt-3">
+                        <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Comments Section -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-chat-dots"></i> Comments ({{ comments|length }})
+            </div>
+            <div class="card-body">
+                {% for comment in comments %}
+                    <div class="comment-box mb-3 p-3">
+                        <div class="d-flex justify-content-between">
+                            <strong><i class="bi bi-person-circle"></i> {{ comment.user.name }}</strong>
+                            <small class="text-muted">{{ comment.created_at|date:"F j, Y, g:i a" }}</small>
+                        </div>
+                        <p class="mb-0 mt-2">{{ comment.comment }}</p>
+                    </div>
+                {% empty %}
+                    <p class="text-muted text-center">No comments yet. Be the first!</p>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Add Comment Form -->
+        {% if user.is_authenticated %}
+            <div class="card shadow-sm mt-4">
+                <div class="card-header bg-secondary text-white">
+                    <i class="bi bi-pencil-square"></i> Add a Comment
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <textarea name="comment" class="form-control" rows="3" placeholder="Write your comment..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-send"></i> Post Comment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-info mt-3 text-center">
+                <i class="bi bi-info-circle"></i> <a href="{% url 'login' %}">Login</a> to leave a comment.
+            </div>
+        {% endif %}
+        
+        <div class="mt-4 text-center">
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Back to all posts
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
