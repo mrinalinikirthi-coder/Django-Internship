@@ -28,3 +28,5 @@ class Posts(models.Model):
     S_id=models.ForeignKey('Students',on_delete=models.Cascade)
     S_Sub_id=models.ForeignKey('Student_Subject',on_delete=models.Cascade)
     T_id=models.ForeignKey('Teachers',on_delete=models.Cascade)
+    Content=models.TextField()
+    Data_and_Time_of_publish=models.DateTimeField(auto_now_add=True)
