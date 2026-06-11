@@ -20,3 +20,11 @@ class Student_Subject(models.Model):
     S_id=models.ForeignKey('Students',on_delete=models.Cascade)
     S_Sub_id=models.CharField(max_length=10)
     S_Sub_Name=models.CharField(max_length=30)
+class Teacher_Subject(models.Model):
+    T_id=models.ForeignKey('Teachers',on_delete=models.Cascade)
+    T_Sub_id=models.CharField(max_length=10)
+    T_Sub_Name=models.CharField(max_length=30)
+class Posts(models.Model):
+    S_id=models.ForeignKey('Students',on_delete=models.Cascade)
+    S_Sub_id=models.ForeignKey('Student_Subject',on_delete=models.Cascade)
+    T_id=models.ForeignKey('Teachers',on_delete=models.Cascade)
