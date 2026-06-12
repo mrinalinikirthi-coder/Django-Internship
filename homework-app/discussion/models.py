@@ -22,9 +22,13 @@ class Student(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
 class Subject(models.Model):
     sub_name=models.CharField(max_length=50)
-class Posts(models.Model):
-    s_id=models.ForeignKey('Student',on_delete=models.CASCADE)
-    sub_id=models.ForeignKey('Subject',on_delete=models.CASCADE)
-    t_id=models.ForeignKey('Teacher',on_delete=models.CASCADE)
+class Post(models.Model):
+    s_id=models.ForeignKey(Student,on_delete=models.CASCADE)
+    sub_id=models.ForeignKey(Subject,on_delete=models.CASCADE)
     content=models.TextField()
     created_at=models.DateTimeField(auto_now_add=True)
+class Reply(models.Model):
+    p_id=models.ForeignKey(Post,on_delete=models.CASCADE)
+    t_id=models.ForeignKey(Teacher,on_delete=models.CASCADE)
+    reply=models.TextField()
+    created_at=models.DateTimeField()
