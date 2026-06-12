@@ -21,7 +21,7 @@ class Student(models.Model):
     subject=models.ForeignKey('Subject',on_delete=models.CASCADE)
     user=models.OneToOneField(User,on_delete=models.CASCADE)
 class Subject(models.Model):
-    sub_name=models.CharField(max_length=50)
+    name=models.CharField(max_length=50)
 class Post(models.Model):
     student=models.ForeignKey(Student,on_delete=models.CASCADE)
     subject=models.ForeignKey(Subject,on_delete=models.CASCADE)
