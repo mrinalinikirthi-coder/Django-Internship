@@ -7,7 +7,7 @@ class Teacher(models.Model):
     years_of_exp=models.SmallIntegerField()
     gender=models.CharField(max_length=10,choices=gen_choices)
     nationality=models.CharField(max_length=30)
-    sub_id=models.ForeignKey('Subject',on_delete=models.CASCADE)
+    subject=models.ForeignKey('Subject',on_delete=models.CASCADE)
     user=models.OneToOneField(User,on_delete=models.CASCADE)
 class Student(models.Model):
     gen_choices=[('M','Male'),('F','Female'),('O',"Other")]
@@ -18,17 +18,17 @@ class Student(models.Model):
     school_name=models.CharField(max_length=50)
     gender=models.CharField(max_length=10,choices=gen_choices)
     nationality=models.CharField(max_length=30)
-    sub_id=models.ForeignKey('Subject',on_delete=models.CASCADE)
+    subject=models.ForeignKey('Subject',on_delete=models.CASCADE)
     user=models.OneToOneField(User,on_delete=models.CASCADE)
 class Subject(models.Model):
     sub_name=models.CharField(max_length=50)
 class Post(models.Model):
-    s_id=models.ForeignKey(Student,on_delete=models.CASCADE)
-    sub_id=models.ForeignKey(Subject,on_delete=models.CASCADE)
+    student=models.ForeignKey(Student,on_delete=models.CASCADE)
+    subject=models.ForeignKey(Subject,on_delete=models.CASCADE)
     content=models.TextField()
     created_at=models.DateTimeField(auto_now_add=True)
 class Reply(models.Model):
-    p_id=models.ForeignKey(Post,on_delete=models.CASCADE)
-    t_id=models.ForeignKey(Teacher,on_delete=models.CASCADE)
+    post=models.ForeignKey(Post,on_delete=models.CASCADE)
+    teacher=models.ForeignKey(Teacher,on_delete=models.CASCADE)
     reply=models.TextField()
     created_at=models.DateTimeField()
