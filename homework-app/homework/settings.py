@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'discussion',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
