@@ -5,3 +5,9 @@ class IsStudent(permissions.BasePermission):
             return True
         else:
             return False
+class IsTeacher(permissions.BasePermission):
+    def has_permission(self,request,view):        
+        if hasattr(request.user,'teacher'):
+            return True
+        else:
+            return False

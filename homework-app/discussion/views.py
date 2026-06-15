@@ -5,7 +5,7 @@ PostSerializer,ReplySerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from .permissions import IsStudent
+from .permissions import IsStudent,IsTeacher
 class SubjectViewSet(ModelViewSet):
     queryset=Subject.objects.all()
     serializer_class=SubjectSerializer
@@ -25,7 +25,7 @@ class TeacherViewSet(ModelViewSet):
     queryset=Teacher.objects.all()
     serializer_class=TeacherSerializer
     authentication_classes=[TokenAuthentication]
-    permission_classes=[IsAuthenticated]
+    permission_classes=[IsAuthenticated,IsTeacher]
 class StudentViewSet(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
