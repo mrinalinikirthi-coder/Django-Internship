@@ -11,3 +11,5 @@ class IsTeacher(permissions.BasePermission):
             return True
         else:
             return False
+class IsOwner(permissions.BasePermission):
+    

@@ -20,12 +20,14 @@ class ReplyViewSet(ModelViewSet):
     queryset=Reply.objects.all()
     serializer_class=ReplySerializer
     authentication_classes=[TokenAuthentication]
-    permission_classes=[IsAuthenticated]
+    permission_classes=[IsAuthenticated,IsTeacher]
 class TeacherViewSet(ModelViewSet):
     queryset=Teacher.objects.all()
     serializer_class=TeacherSerializer
-    authentication_classes=[TokenAuthentication]
-    permission_classes=[IsAuthenticated,IsTeacher]
+    authentication_classes=[TokenAuthentication,IsTeacher]
+    permission_classes=[IsAuthenticated]
+    get_permissions
+    http_method_names=['get','put','patch']
 class StudentViewSet(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
