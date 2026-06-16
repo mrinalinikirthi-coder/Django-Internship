@@ -12,4 +12,11 @@ class IsTeacher(permissions.BasePermission):
         else:
             return False
 class IsOwner(permissions.BasePermission):
-    
+    def has_object_permission(self,request,view,obj):
+        if not(request.user.is_authenticated):
+            return False
+        if not(hasattr(obj,'user')):
+            return False
+        if obj.user==request.user:
+            return True
+        return False
