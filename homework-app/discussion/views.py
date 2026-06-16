@@ -1,10 +1,11 @@
 from rest_framework.viewsets import ModelViewSet
 from .models import Teacher,Student,Subject,Post,Reply
-from .serializers import SubjectSerializer,UserSerializer,StudentSerializer,TeacherSerializer,PostSerializer,ReplySerializer
+from .serializers import SubjectSerializer,UserSerializer,StudentSerializer,TeacherSerializer,PostSerializer,ReplySerializer,RegisterSerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .permissions import IsStudent,IsTeacher,IsOwner
+from rest_framework import APIView,status
 class SubjectViewSet(ModelViewSet):
     queryset=Subject.objects.all()
     serializer_class=SubjectSerializer
@@ -51,3 +52,12 @@ class StudentViewSet(ModelViewSet):
             return [IsOwner]
         else:
             return [IsAuthenticated,IsStudent]
+class RegisterView(APIView):
+    authentication_classes=[]
+    permission_classes=[]
+    def post(self, request):
+        serializer=RegisterSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
