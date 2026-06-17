@@ -1,10 +1,14 @@
 from rest_framework import permissions  
 class IsStudent(permissions.BasePermission):
-    def has_permission(self,request,view):        
+    def has_permission(self,request,view):
+        print("Current user:",request.user)
+        print("Has student:",hasattr(request.user,'student'))
+
         if hasattr(request.user,'student'):
+            print("Student Exists")
             return True
-        else:
-            return False
+        print("Student does not exist")
+        return False
 class IsTeacher(permissions.BasePermission):
     def has_permission(self,request,view):        
         if hasattr(request.user,'teacher'):

@@ -20,8 +20,10 @@ class PostViewSet(ModelViewSet):
     def get_permissions(self):
         if self.action in ['update','destroy','partial_update']:
             return [IsOwner()]
+        elif self.action=='create':
+            [IsAuthenticated(),IsStudent()]
         else:
-            return [IsAuthenticated(),IsStudent()]
+            return [IsAuthenticated()]
 class ReplyViewSet(ModelViewSet):
     queryset=Reply.objects.all()
     serializer_class=ReplySerializer
@@ -30,19 +32,23 @@ class ReplyViewSet(ModelViewSet):
     def get_permissions(self):
         if self.action in ['update','destroy','partial_update']:
             return [IsOwner()]
-        else:
+        elif self.action=='create':
             return [IsAuthenticated(),IsTeacher()]
+        else:
+            return [IsAuthenticated()]
 class TeacherViewSet(ModelViewSet):
     queryset=Teacher.objects.all()
     serializer_class=TeacherSerializer
     authentication_classes=[TokenAuthentication]
     permission_classes=[IsAuthenticated(),IsTeacher()]
     def get_permissions(self):
-        if self.action in ['update','destroy','partial_update']:
+        if self.action in ['update','destroy','partial_update',]:
             return [IsOwner()]
+        elif self.action=='create':
+            return [IsAuthenticated()]
         else:
-            return [IsAuthenticated(),IsTeacher()]
-    http_method_names=['get','put','patch']
+            return [IsAuthenticated()]
+    http_method_names=['get','put','patch','post']
 class StudentViewSet(ModelViewSet):
     queryset=Student.objects.all()
     serializer_class=StudentSerializer
@@ -51,8 +57,11 @@ class StudentViewSet(ModelViewSet):
     def get_permissions(self):
         if self.action in ['update','destroy','partial_update']:
             return [IsOwner()]
+        elif self.action=='create':
+            return [IsAuthenticated()]
         else:
-            return [IsAuthenticated(),IsStudent()]
+            return [IsAuthenticated()]
+    http_method_names=['get','put','patch','post']
 class RegisterView(APIView):
     authentication_classes=[]
     permission_classes=[]
