@@ -5,7 +5,8 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .permissions import IsStudent,IsTeacher,IsOwner
-from rest_framework import APIView,status
+from rest_framework.views import APIView
+from rest_framework import status
 class SubjectViewSet(ModelViewSet):
     queryset=Subject.objects.all()
     serializer_class=SubjectSerializer

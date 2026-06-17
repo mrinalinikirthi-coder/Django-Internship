@@ -8,7 +8,7 @@ router.register('students',StudentViewSet)
 router.register('teachers',TeacherViewSet)
 router.register('subjects',SubjectViewSet)
 urlpatterns=[
-    path('api/register/',RegisterView.as_view()),
-    path('api/login/',LoginView.as_view()),
+    path('register/',RegisterView.as_view()),
+    path('login/',LoginView.as_view()),
 ]
 urlpatterns+=router.urls
