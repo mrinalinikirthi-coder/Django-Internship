@@ -21,7 +21,7 @@ class PostViewSet(ModelViewSet):
         if self.action in ['update','destroy','partial_update']:
             return [IsOwner()]
         else:
-            return [IsAuthenticated,IsStudent]
+            return [IsAuthenticated(),IsStudent()]
 class ReplyViewSet(ModelViewSet):
     queryset=Reply.objects.all()
     serializer_class=ReplySerializer
