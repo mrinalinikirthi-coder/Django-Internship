@@ -21,7 +21,7 @@ class PostViewSet(ModelViewSet):
         if self.action in ['update','destroy','partial_update']:
             return [IsOwner()]
         elif self.action=='create':
-            [IsAuthenticated(),IsStudent()]
+            return [IsAuthenticated(),IsStudent()]
         else:
             return [IsAuthenticated()]
 class ReplyViewSet(ModelViewSet):
