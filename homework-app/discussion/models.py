@@ -32,3 +32,4 @@ class Reply(models.Model):
     teacher=models.ForeignKey(Teacher,on_delete=models.CASCADE)
     reply=models.TextField()
     created_at=models.DateTimeField(auto_now_add=True)
+    
