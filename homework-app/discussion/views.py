@@ -4,7 +4,7 @@ from .serializers import SubjectSerializer,UserSerializer,StudentSerializer,Teac
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from .permissions import IsStudent,IsTeacher,IsOwner
+from .permissions import IsStudent,IsTeacher,IsOwner,IsAuthenticatedReadOnly
 from rest_framework.views import APIView
 from rest_framework import status
 class SubjectViewSet(ModelViewSet):
@@ -16,14 +16,14 @@ class PostViewSet(ModelViewSet):
     queryset=Post.objects.all()
     serializer_class=PostSerializer
     authentication_classes=[TokenAuthentication]
-    permission_classes=[IsAuthenticated(),IsStudent()]
+    permission_classes=[]
     def get_permissions(self):
-        if self.action in ['update','destroy','partial_update']:
+        if self.action in ['update','partial_update','destroy']:
             return [IsOwner()]
         elif self.action=='create':
-            return [IsAuthenticated(),IsStudent()]
+            return [IsStudent()]
         else:
-            return [IsAuthenticated()]
+            return []
 class ReplyViewSet(ModelViewSet):
     queryset=Reply.objects.all()
     serializer_class=ReplySerializer
@@ -31,7 +31,7 @@ class ReplyViewSet(ModelViewSet):
     permission_classes=[IsAuthenticated(),IsTeacher()]
     def get_permissions(self):
         if self.action in ['update','destroy','partial_update']:
-            return [IsOwner()]
+            return [IsAuthenticated(),IsOwner()]
         elif self.action=='create':
             return [IsAuthenticated(),IsTeacher()]
         else:
@@ -47,7 +47,7 @@ class TeacherViewSet(ModelViewSet):
         elif self.action=='create':
             return [IsAuthenticated()]
         else:
-            return [IsAuthenticated()]
+            return []
     http_method_names=['get','put','patch','post']
 class StudentViewSet(ModelViewSet):
     queryset=Student.objects.all()
@@ -60,7 +60,7 @@ class StudentViewSet(ModelViewSet):
         elif self.action=='create':
             return [IsAuthenticated()]
         else:
-            return [IsAuthenticated()]
+            return []
     http_method_names=['get','put','patch','post']
 class RegisterView(APIView):
     authentication_classes=[]
