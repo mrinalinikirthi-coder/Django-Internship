@@ -43,6 +43,8 @@ class TeacherViewSet(ModelViewSet):
     serializer_class=TeacherSerializer
     authentication_classes=[TokenAuthentication]
     permission_classes=[IsAuthenticated(),IsTeacher()]
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
     def get_permissions(self):
         if self.action in ['update','destroy','partial_update',]:
             return [IsAuthenticated(),IsOwner()]
@@ -56,6 +58,8 @@ class StudentViewSet(ModelViewSet):
     serializer_class=StudentSerializer
     authentication_classes=[TokenAuthentication]
     permission_classes=[IsAuthenticated(),IsStudent()]
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
     def get_permissions(self):
         if self.action in ['update','destroy','partial_update']:
             return [IsAuthenticated(),IsOwner()]
