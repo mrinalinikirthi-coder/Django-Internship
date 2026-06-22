@@ -13,7 +13,7 @@ class SubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Subject
-        fields = ['id', 'name']
+        fields = ['uuid', 'name']
 
 
 class UserSerializer(serializers.ModelSerializer):
