@@ -1,7 +1,11 @@
 from rest_framework import serializers
+
 from .models import Subject,Student,Teacher,Post,Reply
+
 from django.contrib.auth.models import User
+
 from django.contrib.auth import authenticate
+
 from rest_framework.authtoken.models import Token
 
 class SubjectSerializer(serializers.ModelSerializer):
