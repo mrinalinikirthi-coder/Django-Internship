@@ -28,7 +28,7 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ['__all__']
+        fields = '__all__'
         read_only_fields = ['user']
 
 
@@ -36,21 +36,21 @@ class TeacherSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Teacher
-        fields = ['__all__']
+        fields = '__all__'
 
 
 class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ['__all__']
+        fields = '__all__'
 
 
 class ReplySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Reply
-        fields = ['__all__']
+        fields = '__all__'
 
 
 class RegisterSerializer(serializers.Serializer):
