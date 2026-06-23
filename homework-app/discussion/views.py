@@ -50,6 +50,9 @@ class PostViewSet(ModelViewSet):
         logger.info(f"User {self.request.user.username} deleting post {instance.uuid}")
         instance.delete()
         logger.info(f"Post {instance.uuid} deleted by {self.request.user.username}")
+    def handle_exception(self, exc):
+        logger.error(f"Exception in PostViewSet: {exc}")
+        return super().handle_exception(exc)
 
 
 class ReplyViewSet(ModelViewSet):
@@ -81,6 +84,9 @@ class ReplyViewSet(ModelViewSet):
         logger.info(f"Teacher {self.request.user.username} deleting reply {instance.uuid}")
         instance.delete()
         logger.info(f"Reply {instance.uuid} deleted by {self.request.user.username}")
+    def handle_exception(self, exc):
+        logger.error(f"Exception in ReplyViewSet: {exc}")
+        return super().handle_exception(exc)
 
 
 class TeacherViewSet(ModelViewSet):
@@ -102,6 +108,9 @@ class TeacherViewSet(ModelViewSet):
         else:
             return []
     http_method_names = ['get', 'put', 'patch', 'post', 'delete']
+    def handle_exception(self, exc):
+        logger.error(f"Exception in TeacherViewSet: {exc}")
+        return super().handle_exception(exc)
 
 
 class StudentViewSet(ModelViewSet):
@@ -123,6 +132,9 @@ class StudentViewSet(ModelViewSet):
         else:
             return []
     http_method_names = ['get', 'put', 'patch', 'post', 'delete']
+    def handle_exception(self, exc):
+        logger.error(f"Exception in StudentViewSet: {exc}")
+        return super().handle_exception(exc)
 
 
 class RegisterView(APIView):
@@ -139,6 +151,9 @@ class RegisterView(APIView):
             return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
         logger.warning(f"Registration failed for {username}: {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    def handle_exception(self, exc):
+        logger.error(f"Exception in RegisterView: {exc}")
+        return super().handle_exception(exc)
 
 
 class LoginView(APIView):
@@ -154,3 +169,6 @@ class LoginView(APIView):
             return Response(serializer.validated_data, status=status.HTTP_200_OK)
         logger.warning(f"Login failed for {username}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    def handle_exception(self, exc):
+        logger.error(f"Exception in LoginView: {exc}")
+        return super().handle_exception(exc)
