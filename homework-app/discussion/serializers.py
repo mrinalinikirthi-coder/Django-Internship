@@ -62,10 +62,10 @@ class RegisterSerializer(serializers.Serializer):
     email = serializers.EmailField()
 
     def create(self, validated_data):
-        user = User.objects.create_user(username=validated_data['username'],
-                                        email=validated_data['email'],
-                                        password=validated_data['password'])
+        logger.info(f"Creating user: {validated_data['username']}")
+        user = User.objects.create_user(...)
         token = Token.objects.create(user=user)
+        logger.info(f"User {validated_data['username']} created with token")
         return {"user": user, "token": token}
 
 
@@ -75,11 +75,10 @@ class LoginSerializer(serializers.Serializer):
 
     def validate(self, attrs):
         username = attrs['username']
-        password = attrs['password']
-        user = authenticate(username=username, password=password)
+        logger.info(f"Validating login for: {username}")
+        user = authenticate(...)
         if not user:
+            logger.warning(f"Login failed for: {username}")
             raise serializers.ValidationError("Invalid credentials")
-        if not user.is_active:
-            raise serializers.ValidationError("Invalid credentials")
-        token, created = Token.objects.get_or_create(user=user)
+        logger.info(f"Login successful for: {username}")
         return {"user": user.username, "token": token.key}
