@@ -29,7 +29,7 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = '__all__'
-        read_only_fields = ['user']
+        read_only_fields = ['user','created_at', 'updated_at','deleted_at']
 
 
 class TeacherSerializer(serializers.ModelSerializer):
@@ -37,6 +37,7 @@ class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = '__all__'
+        read_only_fields = ['user','created_at', 'updated_at','deleted_at']
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -44,6 +45,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = '__all__'
+        read_only_fields = ['created_at', 'updated_at','deleted_at']
 
 
 class ReplySerializer(serializers.ModelSerializer):
@@ -51,6 +53,7 @@ class ReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = Reply
         fields = '__all__'
+        read_only_fields = ['created_at', 'updated_at','deleted_at']
 
 
 class RegisterSerializer(serializers.Serializer):
