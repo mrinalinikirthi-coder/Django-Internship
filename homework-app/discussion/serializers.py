@@ -1,3 +1,5 @@
+import logging
+
 from rest_framework import serializers
 
 from .models import Subject, Student, Teacher, Post, Reply
@@ -8,7 +10,7 @@ from django.contrib.auth import authenticate
 
 from rest_framework.authtoken.models import Token
 
-
+logger = logging.getLogger(__name__)
 class SubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -63,7 +65,11 @@ class RegisterSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         logger.info(f"Creating user: {validated_data['username']}")
-        user = User.objects.create_user(...)
+        user = User.objects.create_user(
+            username=validated_data['username'],
+            email=validated_data['email'],
+            password=validated_data['password']
+        )
         token = Token.objects.create(user=user)
         logger.info(f"User {validated_data['username']} created with token")
         return {"user": user, "token": token}
@@ -76,7 +82,8 @@ class LoginSerializer(serializers.Serializer):
     def validate(self, attrs):
         username = attrs['username']
         logger.info(f"Validating login for: {username}")
-        user = authenticate(...)
+        user = authenticate(username=username, password=attrs['password'])
+        token, created = Token.objects.get_or_create(user=user)
         if not user:
             logger.warning(f"Login failed for: {username}")
             raise serializers.ValidationError("Invalid credentials")
