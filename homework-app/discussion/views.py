@@ -24,7 +24,7 @@ from rest_framework import status
 class SubjectViewSet(ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
-    authentication_classes = []
+    authentication_classes = [IsAuthenticated]
     permission_classes = []
 
 

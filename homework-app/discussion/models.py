@@ -4,12 +4,36 @@ from django.contrib.auth.models import User
 
 import uuid
 
+from django.utils import timezone
+
+
+class SoftDeleteManager(models.Manager):
+
+    def get_queryset(self):
+        return super().get_queryset().filter(deleted_at__isnull=True)
+
 
 class BaseModel(models.Model):
-    uuid=models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    uuid = models.UUIDField(primary_key=True,
+                            default=uuid.uuid4,
+                            editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    objects = SoftDeleteManager()
     deleted_at = models.DateTimeField(null=True, blank=True)
+    objects_all = models.Manager()
+
+    def delete(self):
+        self.deleted_at = timezone.now()
+        self.save()
+
+    def restore(self):
+        self.deleted_at = None
+        self.save()
+
+    def hard_delete(self):
+        super().delete()
+
     class Meta:
         abstract = True
 
@@ -21,7 +45,7 @@ class Teacher(BaseModel):
     years_of_exp = models.SmallIntegerField()
     gender = models.CharField(max_length=10, choices=gen_choices)
     nationality = models.CharField(max_length=30)
-    subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
+    subject = models.ManyToManyField('Subject')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
@@ -45,7 +69,7 @@ class Student(BaseModel):
     school_name = models.CharField(max_length=50)
     gender = models.CharField(max_length=10, choices=gen_choices)
     nationality = models.CharField(max_length=30)
-    subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
+    subject = models.ManyToManyField('Subject')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
