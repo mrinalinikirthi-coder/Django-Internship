@@ -45,7 +45,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = '__all__'
-        read_only_fields = ['created_at', 'updated_at','deleted_at']
+        read_only_fields = ['created_at', 'updated_at','deleted_at','student']
 
 
 class ReplySerializer(serializers.ModelSerializer):
@@ -53,7 +53,7 @@ class ReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = Reply
         fields = '__all__'
-        read_only_fields = ['created_at', 'updated_at','deleted_at']
+        read_only_fields = ['created_at', 'updated_at','deleted_at','teacher']
 
 
 class RegisterSerializer(serializers.Serializer):

@@ -84,7 +84,7 @@ class StudentViewSet(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
     authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated(), IsStudent()]
+    permission_classes = [IsAuthenticated(), IsStudent()]   
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
