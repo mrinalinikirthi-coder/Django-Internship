@@ -1,0 +1,7 @@
+ERROR 2026-06-24 15:43:11,223 discussion_app.views views.py:162 - Exception in StudentViewSet: Authentication credentials were not provided.
+ERROR 2026-06-24 15:44:46,865 discussion_app.views views.py:206 - Exception in LoginView: {'username': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2026-06-24 15:44:56,953 discussion_app.views views.py:162 - Exception in StudentViewSet: {'subject': [ErrorDetail(string='Expected a list of items but got type "str".', code='not_a_list')]}
+ERROR 2026-06-24 15:56:12,539 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-24 15:59:05,448 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-24 16:03:01,044 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-24 16:04:27,242 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.

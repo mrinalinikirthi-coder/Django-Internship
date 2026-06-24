@@ -8,3 +8,301 @@ INFO 2026-06-23 16:10:41,952 django.utils.autoreload autoreload.py:681 - Watchin
 INFO 2026-06-23 16:12:39,717 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\homework-app\discussion\views.py changed, reloading.
 INFO 2026-06-23 16:12:40,243 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
 INFO 2026-06-23 16:13:22,068 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-24 15:22:35,000 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+WARNING 2026-06-24 15:22:51,090 django.request log.py:249 - Not Found: /register/
+WARNING 2026-06-24 15:22:51,091 django.server log.py:249 - "POST /register/ HTTP/1.1" 404 2362
+WARNING 2026-06-24 15:24:03,206 django.request log.py:249 - Not Found: /register/
+WARNING 2026-06-24 15:24:03,208 django.server log.py:249 - "POST /register/ HTTP/1.1" 404 2362
+INFO 2026-06-24 15:25:30,423 discussion_app.views views.py:171 - Registration attempt for username: Alice
+INFO 2026-06-24 15:25:30,531 discussion_app.serializers serializers.py:75 - Creating user: Alice
+INFO 2026-06-24 15:25:32,861 discussion_app.signals signals.py:32 - User created: Alice (ID: 4)
+INFO 2026-06-24 15:25:32,874 discussion_app.serializers serializers.py:82 - User Alice created with token
+INFO 2026-06-24 15:25:32,874 discussion_app.views views.py:175 - User Alice registered successfully
+INFO 2026-06-24 15:25:32,876 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 201 63
+INFO 2026-06-24 15:26:53,290 discussion_app.views views.py:195 - Login attempt for username: Alice
+INFO 2026-06-24 15:26:53,292 discussion_app.serializers serializers.py:92 - Validating login for: Alice
+INFO 2026-06-24 15:26:55,338 discussion_app.serializers serializers.py:102 - Login successful for: Alice
+INFO 2026-06-24 15:26:55,340 discussion_app.views views.py:198 - User Alice logged in successfully
+INFO 2026-06-24 15:26:55,345 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 504
+WARNING 2026-06-24 15:30:47,289 django.request log.py:249 - Not Found: /
+WARNING 2026-06-24 15:30:47,291 django.server log.py:249 - "GET / HTTP/1.1" 404 2316
+WARNING 2026-06-24 15:30:47,446 django.request log.py:249 - Not Found: /favicon.ico
+WARNING 2026-06-24 15:30:47,448 django.server log.py:249 - "GET /favicon.ico HTTP/1.1" 404 2367
+INFO 2026-06-24 15:30:50,265 django.server log.py:249 - "GET /admin/ HTTP/1.1" 200 13285
+INFO 2026-06-24 15:30:50,563 django.server log.py:249 - "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+INFO 2026-06-24 15:30:50,563 django.server log.py:249 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+INFO 2026-06-24 15:30:50,566 django.server log.py:249 - "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2026-06-24 15:30:50,578 django.server log.py:249 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2026-06-24 15:30:50,578 django.server log.py:249 - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-06-24 15:30:50,579 django.server log.py:249 - "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+INFO 2026-06-24 15:30:50,587 django.server log.py:249 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2026-06-24 15:30:50,603 django.server log.py:249 - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2026-06-24 15:30:50,604 django.server log.py:249 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 978
+INFO 2026-06-24 15:30:50,606 django.server log.py:249 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+INFO 2026-06-24 15:30:56,487 django.server log.py:249 - "GET /admin/auth/user/ HTTP/1.1" 200 17583
+INFO 2026-06-24 15:30:56,520 django.server log.py:249 - "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+INFO 2026-06-24 15:30:56,536 django.server log.py:249 - "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2026-06-24 15:30:56,536 django.server log.py:249 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-06-24 15:30:56,546 django.server log.py:249 - "GET /static/admin/js/actions.js HTTP/1.1" 200 8077
+INFO 2026-06-24 15:30:56,546 django.server log.py:249 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2026-06-24 15:30:56,549 django.server log.py:249 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-06-24 15:30:56,553 django.server log.py:249 - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-06-24 15:30:56,558 django.server log.py:249 - "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+INFO 2026-06-24 15:30:56,562 django.server log.py:249 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2026-06-24 15:30:56,563 django.server log.py:249 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 645
+INFO 2026-06-24 15:30:56,568 django.server log.py:249 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+INFO 2026-06-24 15:30:56,570 django.server log.py:249 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2026-06-24 15:30:56,583 django.server log.py:249 - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-06-24 15:30:56,643 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:30:56,698 django.server log.py:249 - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+INFO 2026-06-24 15:30:56,699 django.server log.py:249 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+INFO 2026-06-24 15:30:56,700 django.server log.py:249 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1761
+INFO 2026-06-24 15:31:02,855 django.server log.py:249 - "GET /admin/auth/user/3/change/ HTTP/1.1" 200 31171
+INFO 2026-06-24 15:31:02,897 django.server log.py:249 - "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2026-06-24 15:31:02,898 django.server log.py:249 - "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 16428
+INFO 2026-06-24 15:31:02,898 django.server log.py:249 - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19698
+INFO 2026-06-24 15:31:02,903 django.server log.py:249 - "GET /static/admin/js/calendar.js HTTP/1.1" 200 9159
+INFO 2026-06-24 15:31:02,975 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:31:03,067 django.server log.py:249 - "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 2387
+INFO 2026-06-24 15:31:03,067 django.server log.py:249 - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1112
+INFO 2026-06-24 15:31:03,068 django.server log.py:249 - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 805
+INFO 2026-06-24 15:31:04,577 django.server log.py:249 - "GET /admin/auth/user/3/delete/ HTTP/1.1" 200 12291
+INFO 2026-06-24 15:31:04,614 django.server log.py:249 - "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+WARNING 2026-06-24 15:31:05,981 discussion_app.signals signals.py:39 - User deleted: A (ID: 3)
+INFO 2026-06-24 15:31:06,010 django.server log.py:249 - "POST /admin/auth/user/3/delete/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:31:06,172 django.server log.py:249 - "GET /admin/auth/user/ HTTP/1.1" 200 17299
+INFO 2026-06-24 15:31:06,298 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:31:06,323 django.server log.py:249 - "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 200 558
+INFO 2026-06-24 15:31:08,293 django.server log.py:249 - "GET /admin/auth/user/2/change/ HTTP/1.1" 200 31253
+INFO 2026-06-24 15:31:08,401 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:31:10,526 django.server log.py:249 - "GET /admin/auth/user/2/delete/ HTTP/1.1" 200 12464
+WARNING 2026-06-24 15:31:11,758 discussion_app.signals signals.py:39 - User deleted: mri (ID: 2)
+INFO 2026-06-24 15:31:11,791 django.server log.py:249 - "POST /admin/auth/user/2/delete/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:31:11,884 django.server log.py:249 - "GET /admin/auth/user/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:31:12,020 django.server log.py:249 - "GET /admin/login/?next=/admin/auth/user/ HTTP/1.1" 200 4250
+INFO 2026-06-24 15:31:12,059 django.server log.py:249 - "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2026-06-24 15:31:59,551 discussion_app.signals signals.py:32 - User created: Mri (ID: 5)
+INFO 2026-06-24 15:32:12,959 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-24 15:35:41,002 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-24 15:35:42,194 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-24 15:36:04,982 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-24 15:36:06,293 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-24 15:36:17,308 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-24 15:36:18,505 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-24 15:37:47,097 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+WARNING 2026-06-24 15:37:52,343 django.request log.py:249 - Not Found: /
+WARNING 2026-06-24 15:37:52,344 django.server log.py:249 - "GET / HTTP/1.1" 404 2316
+INFO 2026-06-24 15:37:57,836 django.server log.py:249 - "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:37:58,028 django.server log.py:249 - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4080
+INFO 2026-06-24 15:37:58,051 django.server log.py:249 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:37:58,053 django.server log.py:249 - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:37:58,054 django.server log.py:249 - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:37:58,059 django.server log.py:249 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:37:58,061 django.server log.py:249 - "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:37:58,062 django.server log.py:249 - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:37:58,067 django.server log.py:249 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:38:08,782 django.server log.py:249 - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4246
+INFO 2026-06-24 15:38:35,462 django.server log.py:249 - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4246
+INFO 2026-06-24 15:40:53,361 django.server log.py:249 - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4246
+INFO 2026-06-24 15:41:02,399 django.server log.py:249 - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4246
+INFO 2026-06-24 15:41:15,153 discussion_app.signals signals.py:34 - User updated: Mri (ID: 5)
+INFO 2026-06-24 15:41:15,170 django.server log.py:249 - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:41:15,364 django.server log.py:249 - "GET /admin/ HTTP/1.1" 200 12618
+INFO 2026-06-24 15:41:15,392 django.server log.py:249 - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:15,405 django.server log.py:249 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:15,406 django.server log.py:249 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,027 django.server log.py:249 - "GET /admin/auth/user/ HTTP/1.1" 200 17150
+INFO 2026-06-24 15:41:21,059 django.server log.py:249 - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,070 django.server log.py:249 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,071 django.server log.py:249 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,074 django.server log.py:249 - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,080 django.server log.py:249 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,081 django.server log.py:249 - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,082 django.server log.py:249 - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,085 django.server log.py:249 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,086 django.server log.py:249 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,086 django.server log.py:249 - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,097 django.server log.py:249 - "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,097 django.server log.py:249 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,103 django.server log.py:249 - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,158 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:41:21,186 django.server log.py:249 - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,187 django.server log.py:249 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:21,194 django.server log.py:249 - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,724 django.server log.py:249 - "GET /admin/auth/user/5/change/ HTTP/1.1" 200 31252
+INFO 2026-06-24 15:41:24,765 django.server log.py:249 - "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,766 django.server log.py:249 - "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,766 django.server log.py:249 - "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,767 django.server log.py:249 - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,846 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:41:24,952 django.server log.py:249 - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,952 django.server log.py:249 - "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:24,953 django.server log.py:249 - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:40,753 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 13108
+INFO 2026-06-24 15:41:40,868 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:41:42,962 django.server log.py:249 - "GET /admin/discussion_app/subject/add/ HTTP/1.1" 200 14328
+INFO 2026-06-24 15:41:43,068 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:41:50,511 discussion_app.admin admin.py:18 - Admin: Mri createdSubject: Subject object (0429166d-b107-4b3c-8f86-c8cd9a0a4cb6)
+INFO 2026-06-24 15:41:50,520 discussion_app.signals signals.py:78 - Subject created: Maths (UUID: 0429166d-b107-4b3c-8f86-c8cd9a0a4cb6)
+INFO 2026-06-24 15:41:50,522 discussion_app.admin admin.py:31 - Admin addition: Mri - Subject object (0429166d-b107-4b3c-8f86-c8cd9a0a4cb6)
+INFO 2026-06-24 15:41:50,536 django.server log.py:249 - "POST /admin/discussion_app/subject/add/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:41:50,683 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 14988
+INFO 2026-06-24 15:41:50,907 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:41:50,926 django.server log.py:249 - "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:41:54,938 django.server log.py:249 - "GET /admin/discussion_app/subject/0429166d-b107-4b3c-8f86-c8cd9a0a4cb6/change/ HTTP/1.1" 200 14788
+INFO 2026-06-24 15:41:55,060 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:42:00,059 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 14698
+INFO 2026-06-24 15:42:01,132 django.server log.py:249 - "GET /admin/discussion_app/subject/add/ HTTP/1.1" 200 14328
+INFO 2026-06-24 15:42:01,253 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:42:08,030 discussion_app.admin admin.py:18 - Admin: Mri createdSubject: Subject object (ac84950d-d154-4577-812c-1834018daffc)
+INFO 2026-06-24 15:42:08,036 discussion_app.signals signals.py:78 - Subject created: Science (UUID: ac84950d-d154-4577-812c-1834018daffc)
+INFO 2026-06-24 15:42:08,036 discussion_app.admin admin.py:31 - Admin addition: Mri - Subject object (ac84950d-d154-4577-812c-1834018daffc)
+INFO 2026-06-24 15:42:08,057 django.server log.py:249 - "POST /admin/discussion_app/subject/add/ HTTP/1.1" 302 0
+INFO 2026-06-24 15:42:08,186 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15438
+INFO 2026-06-24 15:42:08,296 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2026-06-24 15:43:11,223 discussion_app.views views.py:162 - Exception in StudentViewSet: Authentication credentials were not provided.
+WARNING 2026-06-24 15:43:11,227 django.request log.py:249 - Unauthorized: /api/students/
+WARNING 2026-06-24 15:43:11,229 django.server log.py:249 - "POST /api/students/ HTTP/1.1" 401 58
+INFO 2026-06-24 15:44:11,884 discussion_app.views views.py:196 - Login attempt for username: Alice
+INFO 2026-06-24 15:44:11,886 discussion_app.serializers serializers.py:92 - Validating login for: Alice
+INFO 2026-06-24 15:44:13,971 discussion_app.serializers serializers.py:102 - Login successful for: Alice
+INFO 2026-06-24 15:44:13,972 discussion_app.views views.py:199 - User Alice logged in successfully
+INFO 2026-06-24 15:44:13,978 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 504
+INFO 2026-06-24 15:44:46,864 discussion_app.views views.py:196 - Login attempt for username: None
+ERROR 2026-06-24 15:44:46,865 discussion_app.views views.py:206 - Exception in LoginView: {'username': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2026-06-24 15:44:46,866 django.request log.py:249 - Bad Request: /api/login/
+WARNING 2026-06-24 15:44:46,868 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 400 79
+ERROR 2026-06-24 15:44:56,953 discussion_app.views views.py:162 - Exception in StudentViewSet: {'subject': [ErrorDetail(string='Expected a list of items but got type "str".', code='not_a_list')]}
+WARNING 2026-06-24 15:44:56,954 django.request log.py:249 - Bad Request: /api/students/
+WARNING 2026-06-24 15:44:56,956 django.server log.py:249 - "POST /api/students/ HTTP/1.1" 400 62
+INFO 2026-06-24 15:45:20,483 discussion_app.views views.py:146 - User Alice creating a student profile
+INFO 2026-06-24 15:45:20,500 discussion_app.signals signals.py:63 - Student created: Alice (UUID: c3339c1d-84a5-4421-a51a-e614b610051a) by Alice
+INFO 2026-06-24 15:45:20,516 discussion_app.views views.py:149 - Student profile created for Alice
+INFO 2026-06-24 15:45:20,527 django.server log.py:249 - "POST /api/students/ HTTP/1.1" 201 309
+INFO 2026-06-24 15:51:17,798 discussion_app.views views.py:172 - Registration attempt for username: A
+INFO 2026-06-24 15:51:17,915 discussion_app.serializers serializers.py:75 - Creating user: A
+INFO 2026-06-24 15:51:19,980 discussion_app.signals signals.py:32 - User created: A (ID: 6)
+INFO 2026-06-24 15:51:19,987 discussion_app.serializers serializers.py:82 - User A created with token
+INFO 2026-06-24 15:51:19,987 discussion_app.views views.py:176 - User A registered successfully
+INFO 2026-06-24 15:51:19,988 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 201 63
+INFO 2026-06-24 15:51:28,744 discussion_app.views views.py:172 - Registration attempt for username: A
+WARNING 2026-06-24 15:51:28,748 discussion_app.views views.py:180 - Registration failed for A: {'email': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2026-06-24 15:51:28,752 django.request log.py:249 - Bad Request: /api/register/
+WARNING 2026-06-24 15:51:28,753 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 400 37
+INFO 2026-06-24 15:51:37,512 discussion_app.views views.py:196 - Login attempt for username: A
+INFO 2026-06-24 15:51:37,513 discussion_app.serializers serializers.py:92 - Validating login for: A
+INFO 2026-06-24 15:51:39,645 discussion_app.serializers serializers.py:102 - Login successful for: A
+INFO 2026-06-24 15:51:39,646 discussion_app.views views.py:199 - User A logged in successfully
+INFO 2026-06-24 15:51:39,648 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 500
+INFO 2026-06-24 15:52:25,337 discussion_app.views views.py:119 - User Alice creating a teacher profile
+INFO 2026-06-24 15:52:25,345 discussion_app.signals signals.py:47 - Teacher created: A (UUID: ac455028-e443-4eb8-bf90-66983fd52dd9) by Alice
+INFO 2026-06-24 15:52:25,354 discussion_app.views views.py:122 - Teacher profile created for Alice
+INFO 2026-06-24 15:52:25,363 django.server log.py:249 - "POST /api/teachers/ HTTP/1.1" 201 298
+INFO 2026-06-24 15:54:04,068 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15148
+INFO 2026-06-24 15:54:04,101 django.server log.py:249 - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,117 django.server log.py:249 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,118 django.server log.py:249 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,125 django.server log.py:249 - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,130 django.server log.py:249 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,130 django.server log.py:249 - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,131 django.server log.py:249 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,140 django.server log.py:249 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,140 django.server log.py:249 - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,142 django.server log.py:249 - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,142 django.server log.py:249 - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,145 django.server log.py:249 - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,146 django.server log.py:249 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,147 django.server log.py:249 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,152 django.server log.py:249 - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,159 django.server log.py:249 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,164 django.server log.py:249 - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:04,214 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:54:06,567 django.server log.py:249 - "GET /admin/discussion_app/student/ HTTP/1.1" 200 15285
+INFO 2026-06-24 15:54:06,675 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:54:08,527 django.server log.py:249 - "GET /admin/discussion_app/student/c3339c1d-84a5-4421-a51a-e614b610051a/change/ HTTP/1.1" 200 21419
+INFO 2026-06-24 15:54:08,569 django.server log.py:249 - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:08,569 django.server log.py:249 - "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:08,578 django.server log.py:249 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:08,582 django.server log.py:249 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:08,589 django.server log.py:249 - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:08,668 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:54:08,746 django.server log.py:249 - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:08,746 django.server log.py:249 - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2026-06-24 15:54:40,504 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15148
+INFO 2026-06-24 15:54:40,626 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:54:49,613 discussion_app.permissions permissions.py:10 - Student permission check for user: Alice
+INFO 2026-06-24 15:54:49,619 discussion_app.permissions permissions.py:12 - User Alice is a student
+INFO 2026-06-24 15:54:49,623 discussion_app.views views.py:49 - User Alice creating a new post
+INFO 2026-06-24 15:54:49,638 discussion_app.signals signals.py:91 - Post created: 'What is planetry motion?...' by Alice (UUID: a1e8b638-4258-4bb2-bb01-9e616c3e6076)
+INFO 2026-06-24 15:54:49,638 discussion_app.views views.py:51 - Post created by Alice
+INFO 2026-06-24 15:54:49,641 django.server log.py:249 - "POST /api/posts/ HTTP/1.1" 201 286
+INFO 2026-06-24 15:55:32,647 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 15296
+INFO 2026-06-24 15:55:32,763 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:56:12,531 discussion_app.permissions permissions.py:21 - Teacher permission check for user: A
+WARNING 2026-06-24 15:56:12,538 discussion_app.permissions permissions.py:25 - User A is NOT a teacher
+ERROR 2026-06-24 15:56:12,539 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-24 15:56:12,551 django.request log.py:249 - Forbidden: /api/replies/
+WARNING 2026-06-24 15:56:12,553 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63
+INFO 2026-06-24 15:56:48,462 django.server log.py:249 - "GET /admin/discussion_app/teacher/ac455028-e443-4eb8-bf90-66983fd52dd9/change/ HTTP/1.1" 200 21011
+INFO 2026-06-24 15:56:48,575 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:57:21,762 discussion_app.views views.py:196 - Login attempt for username: A
+INFO 2026-06-24 15:57:21,763 discussion_app.serializers serializers.py:92 - Validating login for: A
+INFO 2026-06-24 15:57:23,911 discussion_app.serializers serializers.py:102 - Login successful for: A
+INFO 2026-06-24 15:57:23,911 discussion_app.views views.py:199 - User A logged in successfully
+INFO 2026-06-24 15:57:23,913 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 500
+INFO 2026-06-24 15:58:28,808 django.server log.py:249 - "GET /admin/discussion_app/post/ HTTP/1.1" 200 15412
+INFO 2026-06-24 15:58:28,912 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:58:49,232 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 15296
+INFO 2026-06-24 15:58:49,358 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 15:59:05,440 discussion_app.permissions permissions.py:21 - Teacher permission check for user: A
+WARNING 2026-06-24 15:59:05,447 discussion_app.permissions permissions.py:25 - User A is NOT a teacher
+ERROR 2026-06-24 15:59:05,448 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-24 15:59:05,449 django.request log.py:249 - Forbidden: /api/replies/
+WARNING 2026-06-24 15:59:05,450 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63
+INFO 2026-06-24 15:59:19,165 django.server log.py:249 - "GET /admin/discussion_app/reply/ HTTP/1.1" 200 13090
+INFO 2026-06-24 15:59:19,291 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 16:00:01,726 django.server log.py:249 - "GET /api/posts/ HTTP/1.1" 200 288
+INFO 2026-06-24 16:01:21,506 django.server log.py:249 - "GET /api/teachers/ HTTP/1.1" 200 300
+INFO 2026-06-24 16:02:15,523 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 15296
+INFO 2026-06-24 16:02:15,561 django.server log.py:249 - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,567 django.server log.py:249 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,584 django.server log.py:249 - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,585 django.server log.py:249 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,587 django.server log.py:249 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,590 django.server log.py:249 - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,593 django.server log.py:249 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,594 django.server log.py:249 - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,600 django.server log.py:249 - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,601 django.server log.py:249 - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,601 django.server log.py:249 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,608 django.server log.py:249 - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,609 django.server log.py:249 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,609 django.server log.py:249 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,613 django.server log.py:249 - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,619 django.server log.py:249 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,623 django.server log.py:249 - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:15,684 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 16:02:18,331 django.server log.py:249 - "GET /admin/discussion_app/teacher/ac455028-e443-4eb8-bf90-66983fd52dd9/change/ HTTP/1.1" 200 21011
+INFO 2026-06-24 16:02:18,384 django.server log.py:249 - "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:18,386 django.server log.py:249 - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:18,397 django.server log.py:249 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:18,404 django.server log.py:249 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:18,407 django.server log.py:249 - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:18,484 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-24 16:02:18,554 django.server log.py:249 - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:18,554 django.server log.py:249 - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2026-06-24 16:02:40,928 discussion_app.views views.py:196 - Login attempt for username: A
+INFO 2026-06-24 16:02:40,930 discussion_app.serializers serializers.py:92 - Validating login for: A
+INFO 2026-06-24 16:02:43,175 discussion_app.serializers serializers.py:102 - Login successful for: A
+INFO 2026-06-24 16:02:43,177 discussion_app.views views.py:199 - User A logged in successfully
+INFO 2026-06-24 16:02:43,182 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 500
+INFO 2026-06-24 16:03:01,037 discussion_app.permissions permissions.py:21 - Teacher permission check for user: A
+WARNING 2026-06-24 16:03:01,044 discussion_app.permissions permissions.py:25 - User A is NOT a teacher
+ERROR 2026-06-24 16:03:01,044 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-24 16:03:01,045 django.request log.py:249 - Forbidden: /api/replies/
+WARNING 2026-06-24 16:03:01,046 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63
+INFO 2026-06-24 16:04:27,234 discussion_app.permissions permissions.py:21 - Teacher permission check for user: A
+WARNING 2026-06-24 16:04:27,241 discussion_app.permissions permissions.py:25 - User A is NOT a teacher
+ERROR 2026-06-24 16:04:27,242 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-24 16:04:27,243 django.request log.py:249 - Forbidden: /api/replies/
+WARNING 2026-06-24 16:04:27,244 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63

@@ -12,6 +12,7 @@ from rest_framework import status
 import logging
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import IsAdminUser
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +25,7 @@ class SubjectViewSet(ModelViewSet):
     
     def get_permissions(self):
         if self.action in ['create', 'update', 'partial_update', 'destroy']:
-            return [IsAuthenticated(), IsTeacher()]
+            return [IsAuthenticated(), IsAdminUser()]
         else:
             return [IsAuthenticated()]
 
