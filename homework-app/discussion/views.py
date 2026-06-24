@@ -42,14 +42,19 @@ class PostViewSet(ModelViewSet):
         logger.info(f"Post created by {self.request.user.username}")
 
     def perform_update(self, serializer):
-        logger.info(f"User {self.request.user.username} updating post {serializer.instance.uuid}")
+        logger.info(f"User {self.request.user.username}"
+                    f" updating post {serializer.instance.uuid}")
         serializer.save()
-        logger.info(f"Post {serializer.instance.uuid} updated by {self.request.user.username}")
+        logger.info(f"Post {serializer.instance.uuid}"
+                    f" updated by {self.request.user.username}")
 
     def perform_destroy(self, instance):
-        logger.info(f"User {self.request.user.username} deleting post {instance.uuid}")
+        logger.info(f"User {self.request.user.username}"
+                    f" deleting post {instance.uuid}")
         instance.delete()
-        logger.info(f"Post {instance.uuid} deleted by {self.request.user.username}")
+        logger.info(f"Post {instance.uuid}"
+                    f" deleted by {self.request.user.username}")
+
     def handle_exception(self, exc):
         logger.error(f"Exception in PostViewSet: {exc}")
         return super().handle_exception(exc)
@@ -71,19 +76,25 @@ class ReplyViewSet(ModelViewSet):
 
     def perform_create(self, serializer):
         teacher = self.request.user.teacher
-        logger.info(f"Teacher {self.request.user.username} creating a new reply")
+        logger.info(f"Teacher {self.request.user.username}"
+                    f" creating a new reply")
         serializer.save(teacher=teacher)
         logger.info(f"Reply created by teacher {self.request.user.username}")
 
     def perform_update(self, serializer):
-        logger.info(f"Teacher {self.request.user.username} updating reply {serializer.instance.uuid}")
+        logger.info(f"Teacher {self.request.user.username}"
+                    f" updating reply {serializer.instance.uuid}")
         serializer.save()
-        logger.info(f"Reply {serializer.instance.uuid} updated by {self.request.user.username}")
+        logger.info(f"Reply {serializer.instance.uuid}"
+                    f" updated by {self.request.user.username}")
 
     def perform_destroy(self, instance):
-        logger.info(f"Teacher {self.request.user.username} deleting reply {instance.uuid}")
+        logger.info(f"Teacher {self.request.user.username}"
+                    f" deleting reply {instance.uuid}")
         instance.delete()
-        logger.info(f"Reply {instance.uuid} deleted by {self.request.user.username}")
+        logger.info(f"Reply {instance.uuid}"
+                    f" deleted by {self.request.user.username}")
+
     def handle_exception(self, exc):
         logger.error(f"Exception in ReplyViewSet: {exc}")
         return super().handle_exception(exc)
@@ -96,9 +107,11 @@ class TeacherViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated(), IsTeacher()]
 
     def perform_create(self, serializer):
-        logger.info(f"User {self.request.user.username} creating a teacher profile")
+        logger.info(f"User {self.request.user.username}"
+                    f" creating a teacher profile")
         serializer.save(user=self.request.user)
-        logger.info(f"Teacher profile created for {self.request.user.username}")
+        logger.info(f"Teacher profile created for"
+                    f" {self.request.user.username}")
 
     def get_permissions(self):
         if self.action in ['update', 'destroy', 'partial_update']:
@@ -108,6 +121,7 @@ class TeacherViewSet(ModelViewSet):
         else:
             return []
     http_method_names = ['get', 'put', 'patch', 'post', 'delete']
+
     def handle_exception(self, exc):
         logger.error(f"Exception in TeacherViewSet: {exc}")
         return super().handle_exception(exc)
@@ -120,9 +134,11 @@ class StudentViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated(), IsStudent()]
 
     def perform_create(self, serializer):
-        logger.info(f"User {self.request.user.username} creating a student profile")
+        logger.info(f"User {self.request.user.username}"
+                    f" creating a student profile")
         serializer.save(user=self.request.user)
-        logger.info(f"Student profile created for {self.request.user.username}")
+        logger.info(f"Student profile created for"
+                    f" {self.request.user.username}")
 
     def get_permissions(self):
         if self.action in ['update', 'destroy', 'partial_update']:
@@ -132,6 +148,7 @@ class StudentViewSet(ModelViewSet):
         else:
             return []
     http_method_names = ['get', 'put', 'patch', 'post', 'delete']
+
     def handle_exception(self, exc):
         logger.error(f"Exception in StudentViewSet: {exc}")
         return super().handle_exception(exc)
@@ -147,10 +164,15 @@ class RegisterView(APIView):
         serializer = RegisterSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            logger.info(f"User {username} registered successfully")
-            return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
-        logger.warning(f"Registration failed for {username}: {serializer.errors}")
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            logger.info(f"User {username}"
+                        f" registered successfully")
+            return Response(serializer.validated_data,
+                            status=status.HTTP_201_CREATED)
+        logger.warning(f"Registration failed for {username}:"
+                       f" {serializer.errors}")
+        return Response(serializer.errors,
+                        status=status.HTTP_400_BAD_REQUEST)
+
     def handle_exception(self, exc):
         logger.error(f"Exception in RegisterView: {exc}")
         return super().handle_exception(exc)
@@ -166,9 +188,11 @@ class LoginView(APIView):
         serializer = LoginSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             logger.info(f"User {username} logged in successfully")
-            return Response(serializer.validated_data, status=status.HTTP_200_OK)
+            return Response(serializer.validated_data,
+                            status=status.HTTP_200_OK)
         logger.warning(f"Login failed for {username}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def handle_exception(self, exc):
         logger.error(f"Exception in LoginView: {exc}")
         return super().handle_exception(exc)

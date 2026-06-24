@@ -33,7 +33,8 @@ class IsOwner(permissions.BasePermission):
             logger.warning("Unauthenticated user tried to check ownership")
             return False
 
-        logger.info(f"Owner permission check for user: {request.user} on object: {obj}")
+        logger.info(f"Owner permission check for user: "
+                    f"{request.user} on object: {obj}")
 
         # For Post objects
         if hasattr(obj, 'student'):

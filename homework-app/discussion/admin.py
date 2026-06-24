@@ -10,13 +10,21 @@ logger = logging.getLogger(__name__)
 class BaseAdmin(ModelAdmin):
     def save_model(self, request, obj, form, change):
         if change:
-            logger.info(f"Admin: {request.user.username} updated {obj.__class__.__name__}: {obj}")
+            logger.info(
+                f"Admin: {request.user.username} updated"
+                f"{obj.__class__.__name__}: {obj}"
+                )
         else:
-            logger.info(f"Admin: {request.user.username} created {obj.__class__.__name__}: {obj}")
+            logger.info(
+                f"Admin: {request.user.username} created"
+                f"{obj.__class__.__name__}: {obj}"
+                    )
         super().save_model(request, obj, form, change)
 
     def delete_model(self, request, obj):
-        logger.warning(f"Admin: {request.user.username} deleted {obj.__class__.__name__}: {obj}")
+        logger.warning(f"Admin: {request.user.username} deleted"
+                       f"{obj.__class__.__name__}: {obj}"
+                       )
         super().delete_model(request, obj)
 
     def log_addition(self, request, obj, message):
@@ -28,7 +36,8 @@ class BaseAdmin(ModelAdmin):
         super().log_change(request, obj, message)
 
     def log_deletion(self, request, obj, object_repr):
-        logger.warning(f"Admin deletion: {request.user.username} - {object_repr}")
+        logger.warning(f"Admin deletion: "
+                       f"{request.user.username} - {object_repr}")
         super().log_deletion(request, obj, object_repr)
 
 

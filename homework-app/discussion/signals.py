@@ -1,5 +1,6 @@
 import logging
-from django.db.models.signals import pre_save, post_save, pre_delete, post_delete
+from django.db.models.signals import pre_save, post_save
+from django.db.models.signals import pre_delete, post_delete
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 from .models import Teacher, Student, Subject, Post, Reply, BaseModel
@@ -13,7 +14,7 @@ def log_model_change(sender, instance, created, action, **kwargs):
     obj_id = getattr(instance, 'uuid', getattr(instance, 'id', 'Unknown'))
     user = getattr(instance, 'user', None)
     username = user.username if user and hasattr(user, 'username') else 'System'
-    
+
     if action == 'created':
         logger.info(f"{model_name} created: {obj_id} by {username}")
     elif action == 'updated':
@@ -43,13 +44,15 @@ def log_user_delete(sender, instance, **kwargs):
 def log_teacher_save(sender, instance, created, **kwargs):
     username = instance.user.username if instance.user else 'Unknown'
     action = 'created' if created else 'updated'
-    logger.info(f"Teacher {action}: {instance.name} (UUID: {instance.uuid}) by {username}")
+    logger.info(f"Teacher {action}: {instance.name} "
+                f"(UUID: {instance.uuid}) by {username}")
 
 
 @receiver(pre_delete, sender=Teacher)
 def log_teacher_delete(sender, instance, **kwargs):
     username = instance.user.username if instance.user else 'Unknown'
-    logger.warning(f"Teacher deleted: {instance.name} (UUID: {instance.uuid}) by {username}")
+    logger.warning(f"Teacher deleted: {instance.name}"
+                   f" (UUID: {instance.uuid}) by {username}")
 
 
 # Student Signals
@@ -57,13 +60,15 @@ def log_teacher_delete(sender, instance, **kwargs):
 def log_student_save(sender, instance, created, **kwargs):
     username = instance.user.username if instance.user else 'Unknown'
     action = 'created' if created else 'updated'
-    logger.info(f"Student {action}: {instance.name} (UUID: {instance.uuid}) by {username}")
+    logger.info(f"Student {action}: {instance.name} "
+                f"(UUID: {instance.uuid}) by {username}")
 
 
 @receiver(pre_delete, sender=Student)
 def log_student_delete(sender, instance, **kwargs):
     username = instance.user.username if instance.user else 'Unknown'
-    logger.warning(f"Student deleted: {instance.name} (UUID: {instance.uuid}) by {username}")
+    logger.warning(f"Student deleted: {instance.name} "
+                   f"(UUID: {instance.uuid}) by {username}")
 
 
 # Subject Signals
@@ -83,13 +88,15 @@ def log_subject_delete(sender, instance, **kwargs):
 def log_post_save(sender, instance, created, **kwargs):
     student_name = instance.student.name if instance.student else 'Unknown'
     action = 'created' if created else 'updated'
-    logger.info(f"Post {action}: '{instance.content[:50]}...' by {student_name} (UUID: {instance.uuid})")
+    logger.info(f"Post {action}: '{instance.content[:50]}...' by"
+                f" {student_name} (UUID: {instance.uuid})")
 
 
 @receiver(pre_delete, sender=Post)
 def log_post_delete(sender, instance, **kwargs):
     student_name = instance.student.name if instance.student else 'Unknown'
-    logger.warning(f"Post deleted: '{instance.content[:50]}...' by {student_name} (UUID: {instance.uuid})")
+    logger.warning(f"Post deleted: '{instance.content[:50]}...' by "
+                   f"{student_name} (UUID: {instance.uuid})")
 
 
 # Reply Signals
@@ -97,10 +104,12 @@ def log_post_delete(sender, instance, **kwargs):
 def log_reply_save(sender, instance, created, **kwargs):
     teacher_name = instance.teacher.name if instance.teacher else 'Unknown'
     action = 'created' if created else 'updated'
-    logger.info(f"Reply {action}: '{instance.reply[:50]}...' by {teacher_name} (UUID: {instance.uuid})")
+    logger.info(f"Reply {action}: '{instance.reply[:50]}...' by"
+                f" {teacher_name} (UUID: {instance.uuid})")
 
 
 @receiver(pre_delete, sender=Reply)
 def log_reply_delete(sender, instance, **kwargs):
     teacher_name = instance.teacher.name if instance.teacher else 'Unknown'
-    logger.warning(f"Reply deleted: '{instance.reply[:50]}...' by {teacher_name} (UUID: {instance.uuid})")
+    logger.warning(f"Reply deleted: '{instance.reply[:50]}...' by "
+                   f"{teacher_name} (UUID: {instance.uuid})")

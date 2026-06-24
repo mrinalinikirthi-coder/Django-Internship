@@ -11,6 +11,8 @@ from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 
 logger = logging.getLogger(__name__)
+
+
 class SubjectSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -31,7 +33,7 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = '__all__'
-        read_only_fields = ['user','created_at', 'updated_at','deleted_at']
+        read_only_fields = ['user', 'created_at', 'updated_at', 'deleted_at']
 
 
 class TeacherSerializer(serializers.ModelSerializer):
@@ -39,7 +41,7 @@ class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = '__all__'
-        read_only_fields = ['user','created_at', 'updated_at','deleted_at']
+        read_only_fields = ['user', 'created_at', 'updated_at', 'deleted_at']
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -47,7 +49,8 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = '__all__'
-        read_only_fields = ['created_at', 'updated_at','deleted_at','student']
+        read_only_fields = ['created_at', 'updated_at',
+                            'deleted_at', 'student']
 
 
 class ReplySerializer(serializers.ModelSerializer):
@@ -55,7 +58,8 @@ class ReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = Reply
         fields = '__all__'
-        read_only_fields = ['created_at', 'updated_at','deleted_at','teacher']
+        read_only_fields = ['created_at', 'updated_at',
+                            'deleted_at', 'teacher']
 
 
 class RegisterSerializer(serializers.Serializer):
