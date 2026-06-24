@@ -10,6 +10,8 @@ from .permissions import IsStudent, IsTeacher, IsOwner
 from rest_framework.views import APIView
 from rest_framework import status
 import logging
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework_simplejwt.tokens import RefreshToken
 
 logger = logging.getLogger(__name__)
 
@@ -17,14 +19,20 @@ logger = logging.getLogger(__name__)
 class SubjectViewSet(ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
-    authentication_classes = [IsAuthenticated]
+    authentication_classes = [JWTAuthentication]
     permission_classes = []
+    
+    def get_permissions(self):
+        if self.action in ['create', 'update', 'partial_update', 'destroy']:
+            return [IsAuthenticated(), IsTeacher()]
+        else:
+            return [IsAuthenticated()]
 
 
 class PostViewSet(ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [JWTAuthentication]
     permission_classes = []
 
     def get_permissions(self):
@@ -63,7 +71,7 @@ class PostViewSet(ModelViewSet):
 class ReplyViewSet(ModelViewSet):
     queryset = Reply.objects.all()
     serializer_class = ReplySerializer
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsTeacher()]
 
     def get_permissions(self):
@@ -103,7 +111,7 @@ class ReplyViewSet(ModelViewSet):
 class TeacherViewSet(ModelViewSet):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsTeacher()]
 
     def perform_create(self, serializer):
@@ -130,7 +138,7 @@ class TeacherViewSet(ModelViewSet):
 class StudentViewSet(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsStudent()]
 
     def perform_create(self, serializer):
@@ -196,3 +204,19 @@ class LoginView(APIView):
     def handle_exception(self, exc):
         logger.error(f"Exception in LoginView: {exc}")
         return super().handle_exception(exc)
+
+
+class LogoutView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        try:
+            refresh_token = request.data.get('refresh_token')
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+            logger.info(f"User {request.user.username} logged out")
+            return Response({"message": "Logged out successfully"}, status=200)
+        except Exception as e:
+            logger.error(f"Logout failed: {e}")
+            return Response({"error": "Invalid token"}, status=400)

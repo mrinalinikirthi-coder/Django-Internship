@@ -10,6 +10,8 @@ from django.contrib.auth import authenticate
 
 from rest_framework.authtoken.models import Token
 
+from rest_framework_simplejwt.tokens import RefreshToken
+
 logger = logging.getLogger(__name__)
 
 
@@ -87,9 +89,17 @@ class LoginSerializer(serializers.Serializer):
         username = attrs['username']
         logger.info(f"Validating login for: {username}")
         user = authenticate(username=username, password=attrs['password'])
-        token, created = Token.objects.get_or_create(user=user)
         if not user:
             logger.warning(f"Login failed for: {username}")
             raise serializers.ValidationError("Invalid credentials")
+        if not user.is_active:
+            logger.warning(f"Inactive user attempted login: {username}")
+            raise serializers.ValidationError("Invalid credentials")
+        
+        refresh = RefreshToken.for_user(user)
         logger.info(f"Login successful for: {username}")
-        return {"user": user.username, "token": token.key}
+        return {
+            "user": user.username,
+            "refresh": str(refresh),
+            "access": str(refresh.access_token),
+        }

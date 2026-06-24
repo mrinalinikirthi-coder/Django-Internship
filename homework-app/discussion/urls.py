@@ -2,7 +2,7 @@ from django.urls import path
 
 from rest_framework.routers import DefaultRouter
 
-from .views import SubjectViewSet, PostViewSet, ReplyViewSet
+from .views import LogoutView, SubjectViewSet, PostViewSet, ReplyViewSet
 
 from .views import TeacherViewSet, StudentViewSet, RegisterView, LoginView
 
@@ -21,5 +21,6 @@ router.register('subjects', SubjectViewSet)
 urlpatterns = [
     path('register/', RegisterView.as_view()),
     path('login/', LoginView.as_view()),
+    path('logout/', LogoutView.as_view()),
 ]
 urlpatterns += router.urls
