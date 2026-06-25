@@ -306,3 +306,9 @@ WARNING 2026-06-24 16:04:27,241 discussion_app.permissions permissions.py:25 - U
 ERROR 2026-06-24 16:04:27,242 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
 WARNING 2026-06-24 16:04:27,243 django.request log.py:249 - Forbidden: /api/replies/
 WARNING 2026-06-24 16:04:27,244 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63
+INFO 2026-06-25 10:15:43,169 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:20:29,938 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-25 10:20:30,892 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:21:22,378 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-25 10:21:23,230 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:21:33,437 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader

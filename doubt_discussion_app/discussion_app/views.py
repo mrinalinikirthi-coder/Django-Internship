@@ -80,6 +80,7 @@ class PostViewSet(ModelViewSet):
     Authentication: JWT required for all actions.
     """
 
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = []
@@ -190,6 +191,7 @@ class ReplyViewSet(ModelViewSet):
     Authentication: JWT required for all actions.
     """
 
+    queryset = Reply.objects.all()
     serializer_class = ReplySerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsTeacher()]
@@ -303,6 +305,7 @@ class TeacherViewSet(ModelViewSet):
     HTTP Methods: GET, PUT, PATCH, POST, DELETE
     """
 
+    queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsTeacher()]
@@ -382,6 +385,7 @@ class StudentViewSet(ModelViewSet):
     HTTP Methods: GET, PUT, PATCH, POST, DELETE
     """
 
+    queryset = Student.objects.all()
     serializer_class = StudentSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsStudent()]
