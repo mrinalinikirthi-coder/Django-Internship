@@ -9,6 +9,7 @@ and APIViews. It includes:
 - JWT authentication for protected endpoints
 - Comprehensive logging for all actions
 - Automatic field assignment (student, teacher, user) from authenticated user
+- Optimized queries using select_related() and prefetch_related()
 
 All views include proper authentication, permission checks, and error handling.
 """
@@ -79,10 +80,26 @@ class PostViewSet(ModelViewSet):
     Authentication: JWT required for all actions.
     """
 
-    queryset = Post.objects.all()
     serializer_class = PostSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = []
+
+    def get_queryset(self):
+        """
+        Optimize queries by fetching related data in a single query.
+
+        Uses select_related to fetch:
+        - student: The student who created the post
+        - student__user: The user account of that student
+        - subject: The subject this post belongs to
+
+        Returns:
+            QuerySet: Optimized queryset with related data prefetched
+        """
+        return Post.objects.select_related(
+            'student__user',  # Post → Student → User (for owner info)
+            'subject'          # Post → Subject
+        ).all()
 
     def get_permissions(self):
         """
@@ -173,10 +190,28 @@ class ReplyViewSet(ModelViewSet):
     Authentication: JWT required for all actions.
     """
 
-    queryset = Reply.objects.all()
     serializer_class = ReplySerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsTeacher()]
+
+    def get_queryset(self):
+        """
+        Optimize queries by fetching related data in a single query.
+
+        Uses select_related to fetch:
+        - post: The post this reply belongs to
+        - post__student: The student who created the post
+        - post__student__user: The user account of that student
+        - teacher: The teacher who created this reply
+        - teacher__user: The user account of that teacher
+
+        Returns:
+            QuerySet: Optimized queryset with related data prefetched
+        """
+        return Reply.objects.select_related(
+            'post__student__user',  # Reply → Post → Student → User
+            'teacher__user'          # Reply → Teacher → User
+        ).all()
 
     def get_permissions(self):
         """
@@ -268,13 +303,29 @@ class TeacherViewSet(ModelViewSet):
     HTTP Methods: GET, PUT, PATCH, POST, DELETE
     """
 
-    queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsTeacher()]
 
     # Allowed HTTP methods for this viewset
     http_method_names = ['get', 'put', 'patch', 'post', 'delete']
+
+    def get_queryset(self):
+        """
+        Optimize queries by fetching related data efficiently.
+
+        Uses:
+        - select_related for the user relationship (OneToOne)
+        - prefetch_related for the subjects relationship (ManyToMany)
+
+        Returns:
+            QuerySet: Optimized queryset with related data prefetched
+        """
+        return Teacher.objects.select_related(
+            'user'  # Teacher → User
+        ).prefetch_related(
+            'subject'  # Teacher → Subjects (ManyToMany)
+        ).all()
 
     def perform_create(self, serializer):
         """
@@ -331,13 +382,29 @@ class StudentViewSet(ModelViewSet):
     HTTP Methods: GET, PUT, PATCH, POST, DELETE
     """
 
-    queryset = Student.objects.all()
     serializer_class = StudentSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated(), IsStudent()]
 
     # Allowed HTTP methods for this viewset
     http_method_names = ['get', 'put', 'patch', 'post', 'delete']
+
+    def get_queryset(self):
+        """
+        Optimize queries by fetching related data efficiently.
+
+        Uses:
+        - select_related for the user relationship (OneToOne)
+        - prefetch_related for the subjects relationship (ManyToMany)
+
+        Returns:
+            QuerySet: Optimized queryset with related data prefetched
+        """
+        return Student.objects.select_related(
+            'user'  # Student → User
+        ).prefetch_related(
+            'subject'  # Student → Subjects (ManyToMany)
+        ).all()
 
     def perform_create(self, serializer):
         """
