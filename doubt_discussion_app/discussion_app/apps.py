@@ -28,5 +28,6 @@ class DiscussionConfig(AppConfig):
         ensuring that all signal receivers are registered.
         """
         # Import signals to register all signal handlers
-        # The # noqa: F401 comment tells Flake8 to ignore "unused import" warning
+        # The # noqa: F401 comment tells Flake8 to ignore
+        # "unused import" warning
         from . import signals  # noqa: F401

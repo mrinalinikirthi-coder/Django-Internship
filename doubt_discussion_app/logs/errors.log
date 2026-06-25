@@ -5,3 +5,20 @@ ERROR 2026-06-24 15:56:12,539 discussion_app.views views.py:108 - Exception in R
 ERROR 2026-06-24 15:59:05,448 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
 ERROR 2026-06-24 16:03:01,044 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
 ERROR 2026-06-24 16:04:27,242 discussion_app.views views.py:108 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 10:25:32,041 discussion_app.views views.py:291 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 10:30:23,660 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 10:31:00,004 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 10:32:41,698 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:10:08,054 discussion_app.views views.py:508 - Exception in RegisterView: Unsupported media type "text/plain" in request.
+ERROR 2026-06-25 11:12:24,045 discussion_app.views views.py:564 - Exception in LoginView: {'non_field_errors': [ErrorDetail(string='Invalid credentials', code='invalid')]}
+ERROR 2026-06-25 11:15:48,228 discussion_app.views views.py:451 - Exception in StudentViewSet: {'subject': [ErrorDetail(string='Expected a list of items but got type "str".', code='not_a_list')]}
+ERROR 2026-06-25 11:18:27,306 discussion_app.views views.py:371 - Exception in TeacherViewSet: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid', code='token_not_valid')}]}
+ERROR 2026-06-25 11:33:33,297 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:34:04,285 discussion_app.views views.py:178 - Exception in PostViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 11:35:04,329 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:37:27,877 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:41:33,424 discussion_app.views views.py:291 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 11:58:24,179 discussion_app.views views.py:291 - Exception in ReplyViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 11:59:38,772 discussion_app.views views.py:178 - Exception in PostViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 12:02:03,658 discussion_app.views views.py:371 - Exception in TeacherViewSet: You do not have permission to perform this action.
+ERROR 2026-06-25 12:03:50,200 discussion_app.views views.py:451 - Exception in StudentViewSet: You do not have permission to perform this action.

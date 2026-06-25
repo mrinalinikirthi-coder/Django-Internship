@@ -312,3 +312,457 @@ INFO 2026-06-25 10:20:30,892 django.utils.autoreload autoreload.py:681 - Watchin
 INFO 2026-06-25 10:21:22,378 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
 INFO 2026-06-25 10:21:23,230 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
 INFO 2026-06-25 10:21:33,437 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:22:56,237 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+WARNING 2026-06-25 10:23:05,505 django.request log.py:249 - Not Found: /
+WARNING 2026-06-25 10:23:05,507 django.server log.py:249 - "GET / HTTP/1.1" 404 2316
+WARNING 2026-06-25 10:23:05,632 django.request log.py:249 - Not Found: /favicon.ico
+WARNING 2026-06-25 10:23:05,634 django.server log.py:249 - "GET /favicon.ico HTTP/1.1" 404 2367
+INFO 2026-06-25 10:23:08,956 django.server log.py:249 - "GET /admin/ HTTP/1.1" 200 13523
+INFO 2026-06-25 10:23:08,977 django.server log.py:249 - "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:08,977 django.server log.py:249 - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:08,983 django.server log.py:249 - "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:08,992 django.server log.py:249 - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:08,992 django.server log.py:249 - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:08,993 django.server log.py:249 - "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:08,999 django.server log.py:249 - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:09,006 django.server log.py:249 - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:09,007 django.server log.py:249 - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:14,699 django.server log.py:249 - "GET /admin/ HTTP/1.1" 200 13523
+INFO 2026-06-25 10:23:18,792 django.server log.py:249 - "GET /admin/discussion_app/student/ HTTP/1.1" 200 15285
+INFO 2026-06-25 10:23:18,823 django.server log.py:249 - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,828 django.server log.py:249 - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,838 django.server log.py:249 - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,840 django.server log.py:249 - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,845 django.server log.py:249 - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,847 django.server log.py:249 - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,847 django.server log.py:249 - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,848 django.server log.py:249 - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,848 django.server log.py:249 - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,853 django.server log.py:249 - "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,860 django.server log.py:249 - "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:18,908 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:23:18,941 django.server log.py:249 - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:23:30,022 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 15296
+INFO 2026-06-25 10:23:30,116 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:23:33,009 django.server log.py:249 - "GET /admin/discussion_app/post/ HTTP/1.1" 200 15412
+INFO 2026-06-25 10:23:33,104 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:23:34,658 django.server log.py:249 - "GET /admin/discussion_app/reply/ HTTP/1.1" 200 13090
+INFO 2026-06-25 10:23:34,758 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:23:37,024 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15148
+INFO 2026-06-25 10:23:37,121 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:23:40,055 django.server log.py:249 - "GET /admin/discussion_app/reply/ HTTP/1.1" 200 13090
+INFO 2026-06-25 10:23:40,142 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:24:33,260 django.server log.py:249 - "GET /admin/discussion_app/post/ HTTP/1.1" 200 15412
+INFO 2026-06-25 10:24:33,375 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:24:41,810 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 15296
+INFO 2026-06-25 10:24:41,924 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:25:05,231 discussion_app.views views.py:537 - Login attempt for username: A
+INFO 2026-06-25 10:25:05,233 discussion_app.serializers serializers.py:206 - Validating login for: A
+INFO 2026-06-25 10:25:07,533 discussion_app.serializers serializers.py:224 - Login successful for: A
+INFO 2026-06-25 10:25:07,535 discussion_app.views views.py:542 - User A logged in successfully
+INFO 2026-06-25 10:25:07,538 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 500
+INFO 2026-06-25 10:25:32,034 discussion_app.permissions permissions.py:73 - Teacher permission check for user: A
+WARNING 2026-06-25 10:25:32,040 discussion_app.permissions permissions.py:79 - User A is NOT a teacher
+ERROR 2026-06-25 10:25:32,041 discussion_app.views views.py:291 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 10:25:32,044 django.request log.py:249 - Forbidden: /api/replies/
+WARNING 2026-06-25 10:25:32,046 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63
+INFO 2026-06-25 10:30:04,434 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-25 10:30:05,494 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:30:17,739 discussion_app.views views.py:537 - Login attempt for username: A
+INFO 2026-06-25 10:30:17,741 discussion_app.serializers serializers.py:206 - Validating login for: A
+INFO 2026-06-25 10:30:20,165 discussion_app.serializers serializers.py:224 - Login successful for: A
+INFO 2026-06-25 10:30:20,167 discussion_app.views views.py:542 - User A logged in successfully
+INFO 2026-06-25 10:30:20,175 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 500
+ERROR 2026-06-25 10:30:23,660 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 10:30:23,761 django.request log.py:249 - Internal Server Error: /api/replies/
+Traceback (most recent call last):
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 292, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 242, in perform_create
+    teacher = self.request.user.teacher
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.teacher.RelatedObjectDoesNotExist: User has no teacher.
+ERROR 2026-06-25 10:30:23,776 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 500 110112
+INFO 2026-06-25 10:30:35,376 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:30:44,951 discussion_app.views views.py:537 - Login attempt for username: A
+INFO 2026-06-25 10:30:44,952 discussion_app.serializers serializers.py:206 - Validating login for: A
+INFO 2026-06-25 10:30:47,309 discussion_app.serializers serializers.py:224 - Login successful for: A
+INFO 2026-06-25 10:30:47,310 discussion_app.views views.py:542 - User A logged in successfully
+INFO 2026-06-25 10:30:47,317 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 500
+ERROR 2026-06-25 10:31:00,004 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 10:31:00,095 django.request log.py:249 - Internal Server Error: /api/replies/
+Traceback (most recent call last):
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 292, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 242, in perform_create
+    teacher = self.request.user.teacher
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.teacher.RelatedObjectDoesNotExist: User has no teacher.
+ERROR 2026-06-25 10:31:00,109 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 500 110112
+INFO 2026-06-25 10:32:29,797 django.server log.py:249 - "GET /admin/discussion_app/teacher/ac455028-e443-4eb8-bf90-66983fd52dd9/change/ HTTP/1.1" 200 21011
+INFO 2026-06-25 10:32:29,840 django.server log.py:249 - "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:32:29,840 django.server log.py:249 - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2026-06-25 10:32:30,019 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:32:30,019 django.server log.py:249 - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-06-25 10:32:30,020 django.server log.py:249 - "GET /static/admin/css/forms.css HTTP/1.1" 200 8831
+INFO 2026-06-25 10:32:30,037 django.server log.py:249 - "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:32:30,038 django.server log.py:249 - "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-06-25 10:32:30,039 django.server log.py:249 - "GET /static/admin/css/widgets.css HTTP/1.1" 200 11811
+INFO 2026-06-25 10:32:30,123 django.server log.py:249 - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:32:30,123 django.server log.py:249 - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+ERROR 2026-06-25 10:32:41,698 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 10:32:41,805 django.request log.py:249 - Internal Server Error: /api/replies/
+Traceback (most recent call last):
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 292, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 242, in perform_create
+    teacher = self.request.user.teacher
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.teacher.RelatedObjectDoesNotExist: User has no teacher.
+ERROR 2026-06-25 10:32:41,818 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 500 110112
+INFO 2026-06-25 10:34:33,710 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 10:34:37,352 django.server log.py:249 - "GET /admin/discussion_app/teacher/ac455028-e443-4eb8-bf90-66983fd52dd9/delete/ HTTP/1.1" 200 12707
+INFO 2026-06-25 10:34:37,519 django.server log.py:249 - "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+WARNING 2026-06-25 10:34:39,000 discussion_app.admin admin.py:60 - Admin: Mri deleted Teacher: Teacher object (ac455028-e443-4eb8-bf90-66983fd52dd9)
+INFO 2026-06-25 10:34:39,012 discussion_app.signals signals.py:107 - Teacher updated: A (UUID: ac455028-e443-4eb8-bf90-66983fd52dd9) by Alice
+INFO 2026-06-25 10:34:39,020 django.server log.py:249 - "POST /admin/discussion_app/teacher/ac455028-e443-4eb8-bf90-66983fd52dd9/delete/ HTTP/1.1" 302 0
+INFO 2026-06-25 10:34:39,170 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 13311
+INFO 2026-06-25 10:34:39,271 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:39,289 django.server log.py:249 - "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 304 0
+INFO 2026-06-25 10:34:41,183 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15148
+INFO 2026-06-25 10:34:41,273 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:43,178 django.server log.py:249 - "GET /admin/discussion_app/student/ HTTP/1.1" 200 15285
+INFO 2026-06-25 10:34:43,267 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:47,123 django.server log.py:249 - "GET /admin/discussion_app/student/c3339c1d-84a5-4421-a51a-e614b610051a/change/ HTTP/1.1" 200 21419
+INFO 2026-06-25 10:34:47,236 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:49,755 django.server log.py:249 - "GET /admin/discussion_app/student/c3339c1d-84a5-4421-a51a-e614b610051a/delete/ HTTP/1.1" 200 12888
+WARNING 2026-06-25 10:34:51,136 discussion_app.admin admin.py:60 - Admin: Mri deleted Student: Student object (c3339c1d-84a5-4421-a51a-e614b610051a)
+INFO 2026-06-25 10:34:51,145 discussion_app.signals signals.py:145 - Student updated: Alice (UUID: c3339c1d-84a5-4421-a51a-e614b610051a) by Alice
+INFO 2026-06-25 10:34:51,153 django.server log.py:249 - "POST /admin/discussion_app/student/c3339c1d-84a5-4421-a51a-e614b610051a/delete/ HTTP/1.1" 302 0
+INFO 2026-06-25 10:34:51,258 django.server log.py:249 - "GET /admin/discussion_app/student/ HTTP/1.1" 200 13311
+INFO 2026-06-25 10:34:51,371 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:53,167 django.server log.py:249 - "GET /admin/discussion_app/post/ HTTP/1.1" 200 15412
+INFO 2026-06-25 10:34:53,262 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:54,853 django.server log.py:249 - "GET /admin/discussion_app/post/a1e8b638-4258-4bb2-bb01-9e616c3e6076/change/ HTTP/1.1" 200 18492
+INFO 2026-06-25 10:34:54,949 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:34:56,940 django.server log.py:249 - "GET /admin/discussion_app/post/a1e8b638-4258-4bb2-bb01-9e616c3e6076/delete/ HTTP/1.1" 200 12540
+WARNING 2026-06-25 10:34:58,231 discussion_app.admin admin.py:60 - Admin: Mri deleted Post: Post object (a1e8b638-4258-4bb2-bb01-9e616c3e6076)
+INFO 2026-06-25 10:34:58,238 discussion_app.signals signals.py:215 - Post updated: 'What is planetry motion?...' by Alice (UUID: a1e8b638-4258-4bb2-bb01-9e616c3e6076)
+INFO 2026-06-25 10:34:58,246 django.server log.py:249 - "POST /admin/discussion_app/post/a1e8b638-4258-4bb2-bb01-9e616c3e6076/delete/ HTTP/1.1" 302 0
+INFO 2026-06-25 10:34:58,352 django.server log.py:249 - "GET /admin/discussion_app/post/ HTTP/1.1" 200 13278
+INFO 2026-06-25 10:34:58,465 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 10:35:06,425 django.server log.py:249 - "GET /api/posts/ HTTP/1.1" 200 2
+INFO 2026-06-25 10:35:13,228 django.server log.py:249 - "GET /api/replies/ HTTP/1.1" 200 2
+INFO 2026-06-25 10:35:17,480 django.server log.py:249 - "GET /api/students/ HTTP/1.1" 200 2
+INFO 2026-06-25 10:35:22,502 django.server log.py:249 - "GET /api/teachers/ HTTP/1.1" 200 2
+INFO 2026-06-25 10:54:56,180 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 11:03:49,903 django.server log.py:249 - "GET /api/teachers/ HTTP/1.1" 200 2
+INFO 2026-06-25 11:04:09,096 django.server log.py:249 - "GET /api/posts/ HTTP/1.1" 200 2
+INFO 2026-06-25 11:04:19,211 django.server log.py:249 - "GET /api/students/ HTTP/1.1" 200 2
+INFO 2026-06-25 11:05:11,436 django.server log.py:249 - "GET /api/replies/ HTTP/1.1" 200 2
+INFO 2026-06-25 11:05:28,014 django.server log.py:249 - "GET /api/subjects/ HTTP/1.1" 200 129
+INFO 2026-06-25 11:05:30,957 django.server log.py:249 - "GET /api/subjects/ HTTP/1.1" 200 129
+INFO 2026-06-25 11:08:11,899 discussion_app.views views.py:480 - Registration attempt for username: None
+WARNING 2026-06-25 11:08:11,902 discussion_app.views views.py:492 - Registration failed for None: {'username': [ErrorDetail(string='This field is required.', code='required')], 'password': [ErrorDetail(string='This field is required.', code='required')], 'email': [ErrorDetail(string='This field is required.', code='required')]}
+WARNING 2026-06-25 11:08:11,903 django.request log.py:249 - Bad Request: /api/register/
+WARNING 2026-06-25 11:08:11,905 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 400 115
+INFO 2026-06-25 11:08:40,747 discussion_app.views views.py:480 - Registration attempt for username: T1
+INFO 2026-06-25 11:08:40,960 discussion_app.serializers serializers.py:158 - Creating user: T1
+INFO 2026-06-25 11:08:43,409 discussion_app.signals signals.py:72 - User created: T1 (ID: 7)
+INFO 2026-06-25 11:08:43,420 discussion_app.serializers serializers.py:169 - User T1 created with token
+INFO 2026-06-25 11:08:43,420 discussion_app.views views.py:486 - User T1 registered successfully
+INFO 2026-06-25 11:08:43,422 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 201 57
+ERROR 2026-06-25 11:10:08,054 discussion_app.views views.py:508 - Exception in RegisterView: Unsupported media type "text/plain" in request.
+WARNING 2026-06-25 11:10:08,056 django.request log.py:249 - Unsupported Media Type: /api/register/
+WARNING 2026-06-25 11:10:08,057 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 415 62
+INFO 2026-06-25 11:10:50,436 discussion_app.views views.py:480 - Registration attempt for username: S1
+INFO 2026-06-25 11:10:50,437 discussion_app.serializers serializers.py:158 - Creating user: S1
+INFO 2026-06-25 11:10:52,709 discussion_app.signals signals.py:72 - User created: S1 (ID: 8)
+INFO 2026-06-25 11:10:52,715 discussion_app.serializers serializers.py:169 - User S1 created with token
+INFO 2026-06-25 11:10:52,715 discussion_app.views views.py:486 - User S1 registered successfully
+INFO 2026-06-25 11:10:52,717 django.server log.py:249 - "POST /api/register/ HTTP/1.1" 201 57
+INFO 2026-06-25 11:11:36,823 discussion_app.views views.py:537 - Login attempt for username: T1
+INFO 2026-06-25 11:11:36,824 discussion_app.serializers serializers.py:206 - Validating login for: T1
+INFO 2026-06-25 11:11:39,189 discussion_app.serializers serializers.py:224 - Login successful for: T1
+INFO 2026-06-25 11:11:39,190 discussion_app.views views.py:542 - User T1 logged in successfully
+INFO 2026-06-25 11:11:39,192 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 501
+INFO 2026-06-25 11:12:21,725 discussion_app.views views.py:537 - Login attempt for username: s1
+INFO 2026-06-25 11:12:21,726 discussion_app.serializers serializers.py:206 - Validating login for: s1
+WARNING 2026-06-25 11:12:24,020 discussion_app.serializers serializers.py:213 - Login failed for: s1
+ERROR 2026-06-25 11:12:24,045 discussion_app.views views.py:564 - Exception in LoginView: {'non_field_errors': [ErrorDetail(string='Invalid credentials', code='invalid')]}
+WARNING 2026-06-25 11:12:24,071 django.request log.py:249 - Bad Request: /api/login/
+WARNING 2026-06-25 11:12:24,079 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 400 44
+INFO 2026-06-25 11:12:32,562 discussion_app.views views.py:537 - Login attempt for username: S1
+INFO 2026-06-25 11:12:32,563 discussion_app.serializers serializers.py:206 - Validating login for: S1
+INFO 2026-06-25 11:12:35,015 discussion_app.serializers serializers.py:224 - Login successful for: S1
+INFO 2026-06-25 11:12:35,016 discussion_app.views views.py:542 - User S1 logged in successfully
+INFO 2026-06-25 11:12:35,018 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 501
+WARNING 2026-06-25 11:15:00,846 django.request log.py:249 - Not Found: /
+WARNING 2026-06-25 11:15:00,853 django.server log.py:249 - "GET / HTTP/1.1" 404 2316
+INFO 2026-06-25 11:15:05,821 django.server log.py:249 - "GET /admin/ HTTP/1.1" 200 14573
+INFO 2026-06-25 11:15:06,005 django.server log.py:249 - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 689
+INFO 2026-06-25 11:15:11,285 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15148
+INFO 2026-06-25 11:15:11,413 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2026-06-25 11:15:48,228 discussion_app.views views.py:451 - Exception in StudentViewSet: {'subject': [ErrorDetail(string='Expected a list of items but got type "str".', code='not_a_list')]}
+WARNING 2026-06-25 11:15:48,228 django.request log.py:249 - Bad Request: /api/students/
+WARNING 2026-06-25 11:15:48,231 django.server log.py:249 - "POST /api/students/ HTTP/1.1" 400 62
+INFO 2026-06-25 11:15:59,116 discussion_app.views views.py:423 - User S1 creating a student profile
+INFO 2026-06-25 11:15:59,130 discussion_app.signals signals.py:145 - Student created: S1 (UUID: bf664dc1-e076-44f4-9d87-c2fbbfae8dc1) by S1
+INFO 2026-06-25 11:15:59,152 discussion_app.views views.py:425 - Student profile created for S1
+INFO 2026-06-25 11:15:59,161 django.server log.py:249 - "POST /api/students/ HTTP/1.1" 201 306
+ERROR 2026-06-25 11:18:27,306 discussion_app.views views.py:371 - Exception in TeacherViewSet: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid', code='token_not_valid')}]}
+WARNING 2026-06-25 11:18:27,309 django.request log.py:249 - Unauthorized: /api/teachers/
+WARNING 2026-06-25 11:18:27,310 django.server log.py:249 - "POST /api/teachers/ HTTP/1.1" 401 172
+INFO 2026-06-25 11:18:51,074 discussion_app.views views.py:343 - User T1 creating a teacher profile
+INFO 2026-06-25 11:18:51,081 discussion_app.signals signals.py:107 - Teacher created: T1 (UUID: 29b9d1c4-8859-40ef-bc31-f1a7b5899f44) by T1
+INFO 2026-06-25 11:18:51,093 discussion_app.views views.py:345 - Teacher profile created for T1
+INFO 2026-06-25 11:18:51,098 django.server log.py:249 - "POST /api/teachers/ HTTP/1.1" 201 299
+INFO 2026-06-25 11:29:45,308 discussion_app.permissions permissions.py:41 - Student permission check for user: S1
+INFO 2026-06-25 11:29:45,313 discussion_app.permissions permissions.py:44 - User S1 is a student
+INFO 2026-06-25 11:29:45,319 discussion_app.views views.py:130 - User S1 creating a new post
+INFO 2026-06-25 11:29:45,326 discussion_app.signals signals.py:215 - Post created: 'What is planetry motion?...' by S1 (UUID: 0eef35fc-cd8e-4b16-84bf-cf43155a0743)
+INFO 2026-06-25 11:29:45,327 discussion_app.views views.py:132 - Post created by S1
+INFO 2026-06-25 11:29:45,328 django.server log.py:249 - "POST /api/posts/ HTTP/1.1" 201 286
+INFO 2026-06-25 11:31:46,712 discussion_app.views views.py:243 - Teacher T1 creating a new reply
+INFO 2026-06-25 11:31:46,723 discussion_app.signals signals.py:255 - Reply created: 'Here is the explanation......' by T1 (UUID: 50d5c872-6d88-4495-83f8-409f71dbad4a)
+INFO 2026-06-25 11:31:46,724 discussion_app.views views.py:245 - Reply created by teacher T1
+INFO 2026-06-25 11:31:46,725 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 201 283
+ERROR 2026-06-25 11:33:33,297 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:33:33,401 django.request log.py:249 - Internal Server Error: /api/replies/
+Traceback (most recent call last):
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 292, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 242, in perform_create
+    teacher = self.request.user.teacher
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.teacher.RelatedObjectDoesNotExist: User has no teacher.
+ERROR 2026-06-25 11:33:33,427 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 500 110114
+INFO 2026-06-25 11:34:04,277 discussion_app.permissions permissions.py:41 - Student permission check for user: T1
+WARNING 2026-06-25 11:34:04,284 discussion_app.permissions permissions.py:47 - User T1 is NOT a student
+ERROR 2026-06-25 11:34:04,285 discussion_app.views views.py:178 - Exception in PostViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 11:34:04,286 django.request log.py:249 - Forbidden: /api/posts/
+WARNING 2026-06-25 11:34:04,287 django.server log.py:249 - "POST /api/posts/ HTTP/1.1" 403 63
+ERROR 2026-06-25 11:35:04,329 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:35:04,394 django.request log.py:249 - Internal Server Error: /api/replies/
+Traceback (most recent call last):
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 292, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 242, in perform_create
+    teacher = self.request.user.teacher
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.teacher.RelatedObjectDoesNotExist: User has no teacher.
+ERROR 2026-06-25 11:35:04,401 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 500 110114
+INFO 2026-06-25 11:37:08,046 discussion_app.views views.py:537 - Login attempt for username: S1
+INFO 2026-06-25 11:37:08,047 discussion_app.serializers serializers.py:206 - Validating login for: S1
+INFO 2026-06-25 11:37:10,427 discussion_app.serializers serializers.py:224 - Login successful for: S1
+INFO 2026-06-25 11:37:10,429 discussion_app.views views.py:542 - User S1 logged in successfully
+INFO 2026-06-25 11:37:10,431 django.server log.py:249 - "POST /api/login/ HTTP/1.1" 200 501
+ERROR 2026-06-25 11:37:27,877 discussion_app.views views.py:291 - Exception in ReplyViewSet: User has no teacher.
+ERROR 2026-06-25 11:37:27,949 django.request log.py:249 - Internal Server Error: /api/replies/
+Traceback (most recent call last):
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 292, in handle_exception
+    return super().handle_exception(exc)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py", line 242, in perform_create
+    teacher = self.request.user.teacher
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\My Apps\doubt_discussion_app\myenv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 520, in __get__
+    raise self.RelatedObjectDoesNotExist(
+    ...<2 lines>...
+    )
+django.contrib.auth.models.User.teacher.RelatedObjectDoesNotExist: User has no teacher.
+ERROR 2026-06-25 11:37:27,956 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 500 110114
+INFO 2026-06-25 11:41:22,173 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-25 11:41:23,523 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 11:41:26,167 django.utils.autoreload autoreload.py:265 - C:\Users\HP\My Apps\doubt_discussion_app\discussion_app\views.py changed, reloading.
+INFO 2026-06-25 11:41:27,389 django.utils.autoreload autoreload.py:681 - Watching for file changes with StatReloader
+INFO 2026-06-25 11:41:33,417 discussion_app.permissions permissions.py:73 - Teacher permission check for user: S1
+WARNING 2026-06-25 11:41:33,422 discussion_app.permissions permissions.py:79 - User S1 is NOT a teacher
+ERROR 2026-06-25 11:41:33,424 discussion_app.views views.py:291 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 11:41:33,427 django.request log.py:249 - Forbidden: /api/replies/
+WARNING 2026-06-25 11:41:33,428 django.server log.py:249 - "POST /api/replies/ HTTP/1.1" 403 63
+INFO 2026-06-25 11:57:45,237 django.server log.py:249 - "GET /admin/discussion_app/reply/ HTTP/1.1" 200 15407
+INFO 2026-06-25 11:57:45,346 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 11:58:24,178 discussion_app.permissions permissions.py:118 - Owner permission check for user: S1 on object: Reply object (50d5c872-6d88-4495-83f8-409f71dbad4a)
+INFO 2026-06-25 11:58:24,179 discussion_app.permissions permissions.py:131 - Reply owner check: False
+ERROR 2026-06-25 11:58:24,179 discussion_app.views views.py:291 - Exception in ReplyViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 11:58:24,180 django.request log.py:249 - Forbidden: /api/replies/50d5c872-6d88-4495-83f8-409f71dbad4a/
+WARNING 2026-06-25 11:58:24,181 django.server log.py:249 - "DELETE /api/replies/50d5c872-6d88-4495-83f8-409f71dbad4a/ HTTP/1.1" 403 63
+INFO 2026-06-25 11:58:54,579 django.server log.py:249 - "GET /admin/discussion_app/post/ HTTP/1.1" 200 15411
+INFO 2026-06-25 11:58:54,664 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 11:59:38,770 discussion_app.permissions permissions.py:118 - Owner permission check for user: T1 on object: Post object (0eef35fc-cd8e-4b16-84bf-cf43155a0743)
+INFO 2026-06-25 11:59:38,771 discussion_app.permissions permissions.py:125 - Post owner check: False
+ERROR 2026-06-25 11:59:38,772 discussion_app.views views.py:178 - Exception in PostViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 11:59:38,773 django.request log.py:249 - Forbidden: /api/posts/0eef35fc-cd8e-4b16-84bf-cf43155a0743/
+WARNING 2026-06-25 11:59:38,775 django.server log.py:249 - "DELETE /api/posts/0eef35fc-cd8e-4b16-84bf-cf43155a0743/ HTTP/1.1" 403 63
+INFO 2026-06-25 12:00:01,777 django.server log.py:249 - "GET /admin/discussion_app/subject/ HTTP/1.1" 200 15148
+INFO 2026-06-25 12:00:01,865 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-06-25 12:00:25,284 django.request log.py:249 - Forbidden: /api/subjects/ac84950d-d154-4577-812c-1834018daffc/
+WARNING 2026-06-25 12:00:25,285 django.server log.py:249 - "DELETE /api/subjects/ac84950d-d154-4577-812c-1834018daffc/ HTTP/1.1" 403 63
+WARNING 2026-06-25 12:00:42,588 django.request log.py:249 - Forbidden: /api/subjects/ac84950d-d154-4577-812c-1834018daffc/
+WARNING 2026-06-25 12:00:42,604 django.server log.py:249 - "DELETE /api/subjects/ac84950d-d154-4577-812c-1834018daffc/ HTTP/1.1" 403 63
+INFO 2026-06-25 12:01:37,767 django.server log.py:249 - "GET /admin/discussion_app/teacher/ HTTP/1.1" 200 15294
+INFO 2026-06-25 12:01:37,862 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 12:02:03,657 discussion_app.permissions permissions.py:118 - Owner permission check for user: S1 on object: Teacher object (29b9d1c4-8859-40ef-bc31-f1a7b5899f44)
+INFO 2026-06-25 12:02:03,658 discussion_app.permissions permissions.py:137 - Student/Teacher owner check: False
+ERROR 2026-06-25 12:02:03,658 discussion_app.views views.py:371 - Exception in TeacherViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 12:02:03,660 django.request log.py:249 - Forbidden: /api/teachers/29b9d1c4-8859-40ef-bc31-f1a7b5899f44/
+WARNING 2026-06-25 12:02:03,661 django.server log.py:249 - "DELETE /api/teachers/29b9d1c4-8859-40ef-bc31-f1a7b5899f44/ HTTP/1.1" 403 63
+INFO 2026-06-25 12:03:23,771 django.server log.py:249 - "GET /admin/discussion_app/student/ HTTP/1.1" 200 15279
+INFO 2026-06-25 12:03:23,867 django.server log.py:249 - "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-06-25 12:03:50,188 discussion_app.permissions permissions.py:118 - Owner permission check for user: T1 on object: Student object (bf664dc1-e076-44f4-9d87-c2fbbfae8dc1)
+INFO 2026-06-25 12:03:50,199 discussion_app.permissions permissions.py:137 - Student/Teacher owner check: False
+ERROR 2026-06-25 12:03:50,200 discussion_app.views views.py:451 - Exception in StudentViewSet: You do not have permission to perform this action.
+WARNING 2026-06-25 12:03:50,200 django.request log.py:249 - Forbidden: /api/students/bf664dc1-e076-44f4-9d87-c2fbbfae8dc1/
+WARNING 2026-06-25 12:03:50,201 django.server log.py:249 - "DELETE /api/students/bf664dc1-e076-44f4-9d87-c2fbbfae8dc1/ HTTP/1.1" 403 63

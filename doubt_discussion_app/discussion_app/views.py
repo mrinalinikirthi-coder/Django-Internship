@@ -240,7 +240,8 @@ class ReplyViewSet(ModelViewSet):
             serializer: The serializer instance with validated data
         """
         teacher = self.request.user.teacher
-        logger.info(f"Teacher {self.request.user.username} creating a new reply")
+        logger.info(f"Teacher {self.request.user.username}"
+                    f"creating a new reply")
         serializer.save(teacher=teacher)
         logger.info(f"Reply created by teacher {self.request.user.username}")
 
@@ -340,9 +341,11 @@ class TeacherViewSet(ModelViewSet):
         Args:
             serializer: The serializer instance with validated data
         """
-        logger.info(f"User {self.request.user.username} creating a teacher profile")
+        logger.info(f"User {self.request.user.username}"
+                    f" creating a teacher profile")
         serializer.save(user=self.request.user)
-        logger.info(f"Teacher profile created for {self.request.user.username}")
+        logger.info(f"Teacher profile created for"
+                    f" {self.request.user.username}")
 
     def get_permissions(self):
         """
@@ -420,9 +423,11 @@ class StudentViewSet(ModelViewSet):
         Args:
             serializer: The serializer instance with validated data
         """
-        logger.info(f"User {self.request.user.username} creating a student profile")
+        logger.info(f"User {self.request.user.username}"
+                    f" creating a student profile")
         serializer.save(user=self.request.user)
-        logger.info(f"Student profile created for {self.request.user.username}")
+        logger.info(f"Student profile created for"
+                    f"{self.request.user.username}")
 
     def get_permissions(self):
         """
@@ -489,7 +494,8 @@ class RegisterView(APIView):
                 status=status.HTTP_201_CREATED
             )
 
-        logger.warning(f"Registration failed for {username}: {serializer.errors}")
+        logger.warning(f"Registration failed for {username}"
+                       f": {serializer.errors}")
         return Response(
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST

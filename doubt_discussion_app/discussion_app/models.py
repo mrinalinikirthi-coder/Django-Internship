@@ -48,7 +48,8 @@ class BaseModel(models.Model):
         uuid (UUIDField): Primary key using UUID v4
         created_at (DateTimeField): Timestamp when the record was created
         updated_at (DateTimeField): Timestamp when the record was last updated
-        deleted_at (DateTimeField): Timestamp when the record was soft-deleted (NULL if active)
+        deleted_at (DateTimeField): Timestamp when the record
+                                    was soft-deleted (NULL if active)
     """
 
     # Primary key using UUID for improved security and uniqueness

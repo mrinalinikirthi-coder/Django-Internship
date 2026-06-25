@@ -26,7 +26,7 @@ class BaseAdmin(ModelAdmin):
     - Logs additions, changes, and deletions with user context
     - Uses INFO level for normal operations and WARNING for deletions
     """
-    
+
     def save_model(self, request, obj, form, change):
         """
         Override save_model to log admin creation/update actions.
@@ -35,7 +35,8 @@ class BaseAdmin(ModelAdmin):
             request: The HTTP request object
             obj: The model instance being saved
             form: The form used for saving
-            change: Boolean indicating if this is an update (True) or creation (False)
+            change: Boolean indicating if this is
+                    an update (True) or creation (False)
         """
         if change:
             logger.info(

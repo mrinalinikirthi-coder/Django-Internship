@@ -106,7 +106,8 @@ class PostSerializer(serializers.ModelSerializer):
             'created_at', 'updated_at', 'deleted_at'
         ]
         # Student is set by the view from the logged-in user
-        read_only_fields = ['student', 'created_at', 'updated_at', 'deleted_at']
+        read_only_fields = ['student', 'created_at',
+                            'updated_at', 'deleted_at']
 
 
 class ReplySerializer(serializers.ModelSerializer):
@@ -124,7 +125,8 @@ class ReplySerializer(serializers.ModelSerializer):
             'created_at', 'updated_at', 'deleted_at'
         ]
         # Teacher is set by the view from the logged-in user
-        read_only_fields = ['teacher', 'created_at', 'updated_at', 'deleted_at']
+        read_only_fields = ['teacher', 'created_at',
+                            'updated_at', 'deleted_at']
 
 
 class RegisterSerializer(serializers.Serializer):

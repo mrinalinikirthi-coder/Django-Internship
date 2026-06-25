@@ -8,7 +8,8 @@ Signals are registered for:
 - User (Django's built-in model)
 - Teacher, Student, Subject, Post, Reply (custom models)
 
-All signals include detailed logging with user context and object identification
+All signals include detailed logging with user context
+and object identification
 for audit and debugging purposes.
 """
 
