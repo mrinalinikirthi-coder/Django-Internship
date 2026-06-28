@@ -54,7 +54,7 @@ class SubjectViewSet(ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     authentication_classes = [JWTAuthentication]
-    permission_classes = [AllowAny()]
+    permission_classes = []
 
     def get_permissions(self):
         """
@@ -65,7 +65,7 @@ class SubjectViewSet(ModelViewSet):
         """
         if self.action in ['create', 'update', 'partial_update', 'destroy']:
             return [IsAuthenticated(), IsAdminUser()]
-        return [AllowAny()]
+        return []
 
 
 class PostViewSet(ModelViewSet):
