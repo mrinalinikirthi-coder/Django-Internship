@@ -766,3 +766,4 @@ INFO 2026-06-25 12:03:50,199 discussion_app.permissions permissions.py:137 - Stu
 ERROR 2026-06-25 12:03:50,200 discussion_app.views views.py:451 - Exception in StudentViewSet: You do not have permission to perform this action.
 WARNING 2026-06-25 12:03:50,200 django.request log.py:249 - Forbidden: /api/students/bf664dc1-e076-44f4-9d87-c2fbbfae8dc1/
 WARNING 2026-06-25 12:03:50,201 django.server log.py:249 - "DELETE /api/students/bf664dc1-e076-44f4-9d87-c2fbbfae8dc1/ HTTP/1.1" 403 63
+INFO 2026-06-28 19:18:45,405 discussion_app.signals signals.py:73 - User created: Mrinalini (ID: 1)

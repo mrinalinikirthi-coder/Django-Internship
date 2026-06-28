@@ -26,7 +26,7 @@ from .serializers import (
     RegisterSerializer,
 )
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from .permissions import IsStudent, IsTeacher, IsOwner
 from rest_framework.views import APIView
@@ -54,7 +54,7 @@ class SubjectViewSet(ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     authentication_classes = [JWTAuthentication]
-    permission_classes = []
+    permission_classes = [AllowAny()]
 
     def get_permissions(self):
         """
@@ -65,7 +65,7 @@ class SubjectViewSet(ModelViewSet):
         """
         if self.action in ['create', 'update', 'partial_update', 'destroy']:
             return [IsAuthenticated(), IsAdminUser()]
-        return [IsAuthenticated()]
+        return [AllowAny()]
 
 
 class PostViewSet(ModelViewSet):
